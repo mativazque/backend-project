@@ -13,18 +13,22 @@ server.on('error', error => console.log(`Error server:`, error))
 
 const products = new Container ("./products.txt")
 
-app.get('/', (req, res) => {
-    res.send(`<h1> Bienvenid@s al servidor de Matias Vazquez </h1>`)
+app.get('/', async (req, res) => {
+    try {
+        res.send(`<h1> Bienvenid@s al servidor de Matias Vazquez </h1>`)
+    } catch (err) {
+        console.log(err)
+    }
 })
 
-app.get('/productos', (req, res) => {
-    products.getAll()
+app.get('/productos', async (req, res) => {
+    await products.getAll()
     .then(response => res.send(response))
     .catch((err)=>console.log("Error", err))
 })
 
-app.get('/productoRandom', (req, res) => {
-    products.productRandom()
+app.get('/productoRandom', async (req, res) => {
+    await products.productRandom()
     .then(response => res.send(response))
     .catch((err)=>console.log("Error", err))
 })
