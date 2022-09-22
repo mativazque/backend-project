@@ -11,29 +11,27 @@ const server = app.listen(PORT, () => {
 
 server.on('error', error => console.log(`Error server:`, error))
 
-const products = new Container ("./products.txt")
+const products = new Container("./products.txt")
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+    res.send(`<h1> Bienvenid@s al servidor de Matias Vazquez </h1>`)
+})
+
+app.get('/productos', async (req, res) => {
     try {
-        res.send(`<h1> Bienvenid@s al servidor de Matias Vazquez </h1>`)
+        res.send(await products.getAll())
     } catch (err) {
         console.log(err)
     }
 })
 
-app.get('/productos', async (req, res) => {
-    await products.getAll()
-    .then(response => res.send(response))
-    .catch((err)=>console.log("Error", err))
-})
-
 app.get('/productoRandom', async (req, res) => {
-    await products.productRandom()
-    .then(response => res.send(response))
-    .catch((err)=>console.log("Error", err))
+    try {
+        res.send(await products.productRandom())
+    } catch (err) {
+        console.log(err)
+    }
 })
-
-
 
 
 

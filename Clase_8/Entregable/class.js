@@ -17,7 +17,7 @@ class Container {
         try {
             await fs.promises.writeFile(this.routh, JSON.stringify(data), "utf-8")
         } catch (err) {
-            console.log(err)
+            return err
         }
     }
 
@@ -31,15 +31,15 @@ class Container {
                 //En caso que si, lo agrego al array de readDate, le asigno id +1 y reestribo el archivo
                 const newData = [...readData, { ...product, id: readData[readData.length - 1].id + 1 }]
                 await this.writeFile(newData)
-                return console.log(newData)
+                return newData[newData.length - 1]
             } else {
                 //En caso que no, lo guardo y le asigno id:1
-                const newProducts = [{ ...product, id: 1 }]
-                await this.writeFile(newProducts)
-                return console.log(newProducts)
+                const newProduct = [{ ...product, id: 1 }]
+                await this.writeFile(newProduct)
+                return newProduct
             }
         } catch (err) {
-            return console.log(err)
+            return err
         }
     }
 
@@ -48,7 +48,7 @@ class Container {
             const readData = await this.getAll()
             const itemFound = readData.find(item => item.id === id) ?
                 readData.find(item => item.id === id)
-                : null;
+                : { error: "producto no encontrado" };
             return itemFound;
 
         } catch (err) {
@@ -59,13 +59,16 @@ class Container {
 
     async deleteById(id) {
         try {
-            const readData = await this.getAll()
-            const newData = readData.filter(item => item.id != id)
-            let i = 1
-            newData.map(item => item.id = i++)
-            await this.writeFile(newData)
-            return newData
-
+            if (await this.getById(id)) {
+                const readData = await this.getAll()
+                const newData = readData.filter(item => item.id != id)
+                let i = 1
+                newData.map(item => item.id = i++)
+                await this.writeFile(newData)
+                return { resultado: "Producto eliminado con exito" }
+            } else {
+                return { error: "producto no encontrado" }
+            }
         }
         catch (err) {
             return err
@@ -95,6 +98,22 @@ class Container {
             }
         }
         catch (err) {
+            return err
+        }
+    }
+
+
+    async refreshProduct(product, id) {
+        try {
+            const readData = await this.getAll()
+            if(readData[id - 1]) {
+                readData[id -1] = {...product, id: id}
+                await this.writeFile(readData)
+                return readData[id - 1]
+            } else {
+                return {error: "producto no encontrado"}
+            }
+        } catch (error) {
             return err
         }
     }
