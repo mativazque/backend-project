@@ -1,0 +1,1 @@
+La plantilla que usaré de ahora en más será ejs, debido a que me resulta muy comoda su sintaxis, es decir html y js, con sus reglas pertinentes. 
