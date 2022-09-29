@@ -1,0 +1,33 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Document
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+
+body 
+    header
+        h1.p-5.text-center Cargue los productos que desea
+
+    main
+        .container
+            form(method='post' action='/api/productos')
+                .mb-3
+                    label.form-label(for='name') Nombre
+                    input.form-control(type='text' name='title' required='')
+                .mb-3
+                    label.form-label(for='name') Precio
+                    input.form-control(type='number' name='price' required='')
+                .mb-3
+                    label.form-label(for='name') URL Imagen
+                    input.form-control(type='text' name='thumbnail' required='')
+                button.btn.btn-primary(type='submit') Enviar
+        .container.pt-3
+            a(href='./productos')
+                button.btn.btn-success Ver productos
+    
+    footer
+        h6.text-center.p-5 Copyright MV 2022
+
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8' crossorigin='anonymous')

@@ -1,0 +1,30 @@
+<% if (render) { %>
+    <div class="container">
+        <table class="table align-middle bg-dark text-white">
+            <thead>
+                <tr>
+                    <th scope="col">Img</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(item=> { %>
+                    <tr>
+                        <td>
+                            <img src=<%=item.thumbnail%> alt=<%=item.title%> style="height: 80px;">
+                        </td>
+                        <td>
+                            <%=item.title%>
+                        </td>
+                        <td>
+                            <%=item.price%>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <% } else { %>
+        <h5 class="text-center text-danger p-2 fw-bold">No hay productos</h5>
+        <% } %>
