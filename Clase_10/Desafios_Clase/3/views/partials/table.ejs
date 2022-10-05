@@ -1,0 +1,30 @@
+<% if(render) { %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% usuarios.forEach(item=> { %>
+                <tr>
+                    <td>
+                        <%=item.nombre%>
+                    </td>
+                    <td>
+                        <%=item.apellido%>
+                    </td>
+                    <td>
+                        <%=item.edad%>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+
+    </table>
+<% } else { %>
+    <table class="table-danger">No se encontraron usuarios</table>
+<% } %>
