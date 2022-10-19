@@ -1,1 +1,82 @@
-[{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DALSKFJLKASDJFLS","description":"Esta será la description","timestamp":"10/8/2022, 5:22:53 PM","id":1},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DALSKFJLKASDJFLS","description":"Esta será la description","timestamp":"10/8/2022, 5:22:53 PM","id":2},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DALSKFJLKASDJFLS","description":"Esta será la description","timestamp":"10/8/2022, 5:22:53 PM","id":3},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DJSLKJ49","description":"Esta será la description","timestamp":"10/10/2022, 12:08:33 PM","id":4},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DJSLKJ49","description":"Esta será la description","timestamp":"10/10/2022, 12:08:38 PM","id":5},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DJSLKJ49","description":"Esta será la description","id":6,"timestamp":"10/10/2022, 12:18:53 PM"},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DJSLKJ49","description":"Esta será la description","id":7,"timestamp":"10/10/2022, 12:47:17 PM"},{"nombre":"Reglas","price":44,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png","stock":434,"código":"DJSLKJ49","description":"Esta será la description","id":8,"timestamp":"10/11/2022, 2:50:28 PM"}]
+[
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DALSKFJLKASDJFLS",
+        "description": "Esta será la description",
+        "timestamp": "10/8/2022, 5:22:53 PM",
+        "id": 1
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DALSKFJLKASDJFLS",
+        "description": "Esta será la description",
+        "timestamp": "10/8/2022, 5:22:53 PM",
+        "id": 2
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DALSKFJLKASDJFLS",
+        "description": "Esta será la description",
+        "timestamp": "10/8/2022, 5:22:53 PM",
+        "id": 3
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DJSLKJ49",
+        "description": "Esta será la description",
+        "timestamp": "10/10/2022, 12:08:33 PM",
+        "id": 4
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DJSLKJ49",
+        "description": "Esta será la description",
+        "timestamp": "10/10/2022, 12:08:38 PM",
+        "id": 5
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DJSLKJ49",
+        "description": "Esta será la description",
+        "id": 6,
+        "timestamp": "10/10/2022, 12:18:53 PM"
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DJSLKJ49",
+        "description": "Esta será la description",
+        "id": 7,
+        "timestamp": "10/10/2022, 12:47:17 PM"
+    },
+    {
+        "nombre": "Reglas",
+        "price": 44,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+        "stock": 434,
+        "código": "DJSLKJ49",
+        "description": "Esta será la description",
+        "id": 8,
+        "timestamp": "10/11/2022, 2:50:28 PM"
+    }
+]

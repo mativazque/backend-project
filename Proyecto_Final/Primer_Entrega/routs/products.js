@@ -6,9 +6,7 @@ const login = require('../middleware/middleware')
 
 
 const Container = require('../controllers/controller')
-
 const productos = new Container("./data/products.json")
-
 
 
 routProducts
@@ -61,9 +59,7 @@ routProducts
         } catch (error) {
             console.log(error)
             res.status(500).send(error)
-
         }
-
     })
     .delete("/:id", login, async (req, res) => {
         const id = Number(req.params.id)
