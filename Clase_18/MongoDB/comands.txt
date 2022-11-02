@@ -1,0 +1,40 @@
+
+1) Creo base de datos "ecommerce"
+use ecommerce
+
+2) Creo las colecciones "productos" y "mensajes"
+db.createCollection("productos")
+db.createCollection("mensajes")
+
+3) Inserto 10 documentos en la coleccion "productos"
+db.productos.insertMany([{title: "Calculadora", price: 1500 thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Teclado", price: 3000, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Mouse", price: 5000, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Monitor Led", price: 4500, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Libro", price: 1800, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Lapiz", price: 45, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Tijera", price: 800, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Celular", price: 4999, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "Mate", price: 500, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}, {title: "short", price: 4158, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"}])
+
+
+3) Inserto 10 documentos en la coleccion "mensajes"
+db.mensajes.insertMany([{mail: "matias@gmail.com", text: "Hola, como están?"}, {mail: "nico@gmail.com", text: "Buenas!"}, {mail: "matias@gmail.com", text: "Como vienen con el desafio?"}, {mail: "cami@gmail.com", text: "Buenas!"}, {mail: "let@gmail.com", text: "Hola! Todo bien"}, {mail: "nico@gmail.com", text: "Buenas!"}, {mail: "matias@gmail.com", text: "Como vienen con el desafio?"}, {mail: "nico@gmail.com", text: "Buenas!"}, {mail: "matias@gmail.com", text: "Como vienen con el desafio?"}, {mail: "nico@gmail.com", text: "Buenas!"}])
+
+4) Listo los documentos de la colección "productos"
+db.productos.find()
+
+5) Listo los documentos de la colección "productos"
+db.mensajes.find()
+
+6) CRUD en colección "productos"
+	6.1) Create a product --> db.productos.insertOne({title: "Scaner", price: 4500, thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"})
+	6.2) Read
+		6.2.i) precio < 1000 --> db.productos.find({"price": {$lt: 1000}})
+		6.2.ii) 1000 <= precio => 3000 --> db.productos.find({$and: [{"price": {$gte: 1000}}, {"price": {$lte: 3000}}]})
+		6.2.iii) precio > 3000 ---> db.productos.find({"price": {$gt: 3000}})
+		6.2.iV) El tercer producto más barato --> db.productos.find({}, {"title": 1, "_id": 0}).sort({price: 1}).skip(2).limit(1)
+	6.3) Actualizo todos los productos con stock=100 --> db.productos.updateMany({}, {$set: {"stock":150}})
+	6.4) Actualizo stock a 0 para productos con price > 4000 --> db.productos.updateMany({"price": {$gt: 4000}}, {$set: {"stock": 0}})
+	6.5) Borrar productos con precio < 1000 --> db.productos.deleteMany({"price": {$lt: 1000}})
+
+7)Crear user con permiso solo para leer la db "ecommerce" --> db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
+
+
+
+
+
+
+
