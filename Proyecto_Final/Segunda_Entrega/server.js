@@ -1,5 +1,5 @@
 import express from 'express'
-import {routerProducts} from "./src/routs/ruthProd.js"
+import {routerProducts, routerCart} from "./src/routs/routs.js"
 
 
 const app = express()
@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.use("/api/productos", routerProducts)
+app.use("/api/carrito", routerCart)
 
 
 const PORT = 8080;

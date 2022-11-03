@@ -10,20 +10,20 @@
         "id": 1
     },
     {
-        "nombre": "Reglas",
-        "price": 44,
+        "nombre": "Linterna",
+        "price": 500,
         "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-        "stock": 434,
+        "stock": 4,
         "código": "DALSKFJLKASDJFLS",
         "description": "Esta será la description",
         "timestamp": "10/8/2022, 5:22:53 PM",
         "id": 2
     },
     {
-        "nombre": "Reglas",
-        "price": 44,
+        "nombre": "Monitor",
+        "price": 500,
         "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-        "stock": 434,
+        "stock": 4,
         "código": "DALSKFJLKASDJFLS",
         "description": "Esta será la description",
         "timestamp": "10/8/2022, 5:22:53 PM",
@@ -63,20 +63,20 @@
         "nombre": "Reglas",
         "price": 44,
         "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
-        "stock": 434,
-        "código": "DJSLKJ49",
+        "stock": 4,
+        "código": "DALSKFJLKASDJFLS",
         "description": "Esta será la description",
-        "id": 7,
-        "timestamp": "10/10/2022, 12:47:17 PM"
+        "timestamp": "10/8/2022, 5:22:53 PM",
+        "id": 7
     },
     {
-        "nombre": "Reglas",
+        "nombre": "Cuaderno",
         "price": 44,
         "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
         "stock": 434,
         "código": "DJSLKJ49",
         "description": "Esta será la description",
         "id": 8,
-        "timestamp": "10/11/2022, 2:50:28 PM"
+        "timestamp": "11/2/2022, 5:37:16 PM"
     }
 ]

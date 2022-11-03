@@ -1,5 +1,5 @@
-import ControllerArchivo from "./../../controllers/controllerArchivo.js"
-import config from "./../../configs/configs.js"
+import ControllerArchivo from "../../controllers/controllerFile.js"
+import config from "../../configs/configs.js"
 
 class fileDaoProducts extends ControllerArchivo {
     constructor() {

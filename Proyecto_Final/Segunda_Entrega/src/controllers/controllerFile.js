@@ -1,5 +1,7 @@
 import fs from 'fs'
 
+console.log("Working with FileSystem")
+
 class ControllerArchivo {
     constructor(routh) {
         this.routh = routh
@@ -48,10 +50,9 @@ class ControllerArchivo {
 
     async getById(id) {
         try {
+            const newId = Number(id)
             const readData = await this.getAll()
-            const itemFound = readData.find(item => item.id === id) ?
-                readData.find(item => item.id === id) :
-                NaN;
+            const itemFound = readData.find(item => item.id === newId)
             return itemFound;
 
         } catch (err) {
@@ -61,61 +62,29 @@ class ControllerArchivo {
 
 
     async deleteById(id) {
-        const itemFound = await this.getById(id);
-        try {
-            if (itemFound.id) {
-                const readData = await this.getAll()
-                const newData = readData.filter(item => item.id != id)
-                let i = 1
-                newData.map(item => item.id = i++)
-                await this.writeFile(newData)
-                return true
-            } else {
-                return false
-            }
-        }
-        catch (err) {
-            return err
-        }
-    }
-
-    async deleteAll() {
-        try {
-            await this.writeFile([])
-            const readData = await this.getAll()
-            return readData
-        }
-        catch (err) {
-            return err
-        }
-    }
-
-    async elementRandom() {
+        const newId = Number(id)
         try {
             const readData = await this.getAll()
-
-            if (readData.length > 0) {
-                const elemRandom = readData[Math.floor(Math.random() * readData.length)]
-                return elemRandom
-            } else {
-                console.log("No hay elementos en la base de datos")
-            }
+            const newData = readData.filter(item => item.id != newId)
+            let i = 1
+            newData.map(item => item.id = i++)
+            await this.writeFile(newData)
+            return true
         }
         catch (err) {
             return err
         }
     }
+
+
 
     async update(element, id) {
+        const newId = Number(id)
         try {
             const readData = await this.getAll()
-            if (readData[id - 1]) {
-                readData[id - 1] = { ...element, id: id }
-                await this.writeFile(readData)
-                return readData[id - 1]
-            } else {
-                return NaN
-            }
+            readData[newId - 1] = { ...element, id: newId }
+            await this.writeFile(readData)
+            return readData[newId - 1]
         } catch (error) {
             return err
         }

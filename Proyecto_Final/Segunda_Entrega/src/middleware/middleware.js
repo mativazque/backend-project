@@ -1,6 +1,6 @@
 const login = (req, res, next) => {
 
-    const administrator = false;
+    const administrator = true;
 
     try {
         if (administrator === true) {
