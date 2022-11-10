@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 
 const connectionDB = async () => {
-    const URL = "mongodb+srv://matiasvazquez:Fuster334@cluster0.ybvrimz.mongodb.net/ecommerce"
+    const URL = "mongodb+srv://matiasvazquez:Fuster334@cluster0.ybvrimz.mongodb.net/backend"
     try {
         const connection = await mongoose.connect(URL, {
             useNewUrlParser: true,
