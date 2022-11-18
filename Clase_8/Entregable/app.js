@@ -74,5 +74,8 @@ routerProducts.put("/:id", async (req, res) => {
     }
 })
 
+console.log(__dirname)
 
 app.use("/api/productos", routerProducts)
+
+// C:\C:\Users\matia\Desktop\Curso Coder\Temas\4-Backend-II\Clase_24\entregable\src\routs\web\login.html
