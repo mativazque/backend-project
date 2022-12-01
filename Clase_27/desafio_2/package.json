@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "dependencies": {
+    "yargs": "^17.6.2"
+  },
+  "name": "desafio_2",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
