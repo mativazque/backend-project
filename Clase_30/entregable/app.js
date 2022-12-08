@@ -11,7 +11,9 @@ import routerWeb from "./src/routs/web/home.js"
 import routerUser from "./src/routs/api/user.js"
 import routerInfo from "./src/routs/web/info.js"
 import routerCounter from "./src/routs/web/count.js"
-import config from "./src/configs/index.js" 
+import config from "./src/configs/index.js"
+import cluster from "cluster"
+import {cpus} from "os" 
 
 import passport from "passport"
 import initPassport from "./src/middleware/passport.js"
@@ -39,11 +41,6 @@ app.use("/", routerWeb)
 app.use("/", routerUser)
 app.use("/", routerInfo)
 app.use("/", routerCounter)
-app.get("/datos", (req, res) => {
-    const pid = process.pid
-    res.send(`Server escuchando en ${config.PORT} PID ${pid}`)
-})
-
 
 
 const httpServer = new HttpServer(app)
@@ -51,8 +48,26 @@ const httpServer = new HttpServer(app)
 const io = new IoServer(httpServer)
 initSocket(io)
 
+if(config.MODE == "cluster" && cluster.isPrimary) {
+    const numCPUs = cpus().length
+    console.log(`Número de procesadores: ${numCPUs}`)
+    console.log(`PID MASTER: ${process.pid}`)
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork()
+    }
+    cluster.on(("exit"), worker => {
+        console.log(`Worker ${worker.process.pid} died ${new Date().toLocaleString()}`)
+        cluster.fork()
+    })
+} else {
+    process.on("exit", code => {
+        console.log(`Salida con código de error: ${code}`)
+    })
+    httpServer.listen(config.PORT, () => {
+        console.log(`Server listening on PORT: ${config.PORT}, PID: ${process.pid}`)
+    }).on('error', (err) => console.log(err))
+    console.log(`proceso ${process.pid} escuchando en el puerto ${config.PORT}`)
+}
 
-httpServer.listen(config.PORT, () => {
-    console.log(`Server listening on ${config.PORT}`)
-}).on('error', (err) => console.log(err))
+
 

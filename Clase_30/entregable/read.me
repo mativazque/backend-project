@@ -1,0 +1,39 @@
+A continución detallo los comandos utilizados en el desafío:
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1)Ejecutar el servidor (modos FORK y CLUSTER) con nodemon verificando el número de procesos tomados por node.
+
+$ nodemon app.js -p 8081 -m fork --> Modo Fork
+tasklist /fi "imagename eq node.exe" ---> Ver procesos activos, 2 activos
+
+$ nodemon app.js -p 8082 -m cluster --> Modo cluster
+tasklist /fi "imagename eq node.exe" ---> Ver procesos activos, 6 activos
+
+////Unica forma que funciona////
+$ pm2 start app.js --name="Server1" --watch -- -p 8081
+$ nodemon app.js -p 8082 -m cluster
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+2) Ejecutar el servidor (con los parámetros adecuados) utilizando Forever, verificando su correcta operación. Listar los procesos por Forever y por sistema operativo.
+$ forever start app.js -p 8081 --> Modo Fork
+$ forever start app.js -p 8082 -m cluster --> Modo Cluster
+$ forever list
+$ tasklist /fi "imagename eq node.exe"
+$ forever stopall
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+3) Ejecutar el servidor (con los parámetros adecuados: modo FORK) utilizando PM2 en sus modos modo fork y cluster. Listar los procesos por PM2 y por sistema operativo.
+$ pm2 start app.js --name="Server1" --watch -- -p 8081 --> Modo Fork
+$ pm2 start app.js --name="Server2" --watch -i max -- -p 8082 --> Modo Cluster // Error ver detalle enviado en chat 
+$ pm2 list
+$ pm2 log
+$ pm2 delete Server1 Server2
+
+
+
+
+
+
