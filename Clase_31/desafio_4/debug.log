@@ -1,0 +1,13 @@
+{"level":40,"time":1671148461598,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"not found URL: http://localhost:8080/sdf"}
+{"level":30,"time":1671148479542,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148494858,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148519886,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":50,"time":1671148532818,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Must add two numbers for queryparams, num1 and num2"}
+{"level":30,"time":1671148550703,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148552447,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148553163,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148553647,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":30,"time":1671148553886,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":50,"time":1671148558005,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Must add two numbers for queryparams, num1 and num2"}
+{"level":40,"time":1671148618944,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"not found URL: http://localhost:8080/ssdf"}
+{"level":50,"time":1671148631598,"pid":11564,"hostname":"DESKTOP-831C8KJ","msg":"Must add two numbers for queryparams, num1 and num2"}

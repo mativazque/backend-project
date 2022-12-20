@@ -1,0 +1,2 @@
+{"level":"info","message":"Response successfull at URL /sumar?num1=1&num2=3"}
+{"level":"error","message":"Must add two numbers for queryparams, num1 and num2"}
