@@ -1,6 +1,6 @@
 import { Router } from "express"
-import {cpus} from "os"
-import { logger } from "../../api/logger.js" 
+import { cpus } from "os"
+import { logger } from "../../api/logger.js"
 
 const router = Router()
 
@@ -36,13 +36,21 @@ const data = [
     }
 ]
 
-
 router.get("/info", (req, res) => {
     let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     logger.info(`Ruth: ${fullUrl} Method: ${req.method}`)
     res.render("info", { data: data, argumentos: process.argv.slice(2) })
 })
 
+
+router.get("/info-bloq", (req, res) => {
+    console.log(data)
+    res.send(data)
+})
+
+router.get("/info-nobloq", (req, res) => {
+    res.send(data)
+})
 
 
 export default router

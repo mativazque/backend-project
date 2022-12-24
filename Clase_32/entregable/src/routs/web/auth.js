@@ -17,7 +17,7 @@ router.get("/signup", (req, res) => {
     res.sendFile("signup.html", { root: path.join(__dirname, "./../../../public") })
 })
 
-router.get("/signufail", (req, res) => {
+router.get("/signupfail", (req, res) => {
     let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     logger.info(`Ruth: ${fullUrl} Method: ${req.method}`)
     res.sendFile("signupfail.html", { root: path.join(__dirname, "./../../../public") })
@@ -25,11 +25,11 @@ router.get("/signufail", (req, res) => {
 
 router.post("/signup", passport.authenticate('signup', {
     successRedirect: '/login',
-    failureRedirect: '/signufail',
-}),(req, res) => {
-        let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-        logger.info(`Ruth: ${fullUrl} Method: ${req.method}`)
-    }
+    failureRedirect: '/signupfail',
+}), (req, res) => {
+    let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    logger.info(`Ruth: ${fullUrl} Method: ${req.method}`)
+}
 )
 
 //login

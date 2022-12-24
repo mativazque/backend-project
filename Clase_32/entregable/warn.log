@@ -1,3 +1,15 @@
 {"level":"warn","message":"Not found URL: http://localhost:8080/log"}
 {"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
 {"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/info"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/info"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login?username=mati&password=mati"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/data"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
