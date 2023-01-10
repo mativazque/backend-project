@@ -2,7 +2,6 @@ import passport from "passport"
 import { Strategy as LocalStrategy } from "passport-local"
 import bCrypt from "bcrypt"
 import { users } from "./../api/users.js"
-import { logger } from "../api/logger.js"
 
 
 
@@ -34,6 +33,8 @@ const initPassword = () => {
         { passReqToCallback: true },
         async (req, username, password, done) => {
 
+
+
             const user = await users.getByUsername(username)
 
             if (user) {
@@ -41,8 +42,17 @@ const initPassword = () => {
                 return done(null, false, { message: 'User already exists' })
             }
 
+            const { name, address, age, phone, avatar } = req.body
 
-            const newUser = await users.save({ username: username, password: password })
+            const newUser = await users.save({
+                username: username,
+                password: password,
+                name: name,
+                address: address,
+                age: age,
+                phone: phone,
+                avatar: avatar
+            })
             const usedCreated = await users.getById(newUser)
 
             return done(null, usedCreated)
@@ -51,11 +61,11 @@ const initPassword = () => {
 
 
     passport.serializeUser((user, done) => {
-        done(null, user._id)
+        done(null, user.username)
     })
 
-    passport.deserializeUser(async (_id, done) => {
-        const user = await users.getById(_id)
+    passport.deserializeUser(async (username, done) => {
+        const user = await users.getByUsername(username)
         done(null, user)
     })
 }

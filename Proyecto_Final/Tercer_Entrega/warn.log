@@ -1,0 +1,102 @@
+{"level":"warn","message":"Not found URL: http://localhost:8080/log"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/info"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/info"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login/styles/styles.css"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/login?username=mati&password=mati"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/data"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/signpu"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/css/estilos.css"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/Sin"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/api/productos"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/api/productos"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/api/productos"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/api/productos"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/socket.io/socket.io.js"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"matiasvaz95@gmail.com\" (type string) at path \"_id\" for model \"users\""}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'name')"}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"matiasvaz95@gmail.com\" (type string) at path \"_id\" for model \"users\""}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'name')"}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"matiasvaz95@gmail.com\" (type string) at path \"_id\" for model \"users\""}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'name')"}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"matiasvaz95@gmail.com\" (type string) at path \"_id\" for model \"users\""}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'name')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/undefined"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/undefined"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/undefined"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: ReferenceError: carrito is not defined"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
