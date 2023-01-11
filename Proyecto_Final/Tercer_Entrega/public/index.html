@@ -29,49 +29,45 @@
 </head>
 
 <body>
-    <main>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Datos personales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Deslogearme</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./cart.html" class="text-decoration-none text-white">
-                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
-                                <spam class="spamCart p-1 ps-2 pe-2" id="counterCart">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">eCommerce Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./home">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="./cart" class="text-decoration-none text-white">
+                            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                            <spam class="spamCart p-1 ps-2 pe-2" id="counterCart">
 
-                                </spam>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="d-flex text-white align-items-center">
-                    <a class="navbar-brand" href="" id="avatar">
-                    </a>
-                    <a class="navbar-brand" href="" id="userName">
-                    </a>
-                </div>
+                            </spam>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <header class="text-center p-5">
-            <h1>Productos disponibles</h1>
-        </header>
+
+            <div class="d-flex text-white align-items-center">
+                <a class="navbar-brand" href="./info" id="avatar">
+                </a>
+                <a class="navbar-brand" href="./info" id="userName">
+                </a>
+                <i class="fa-solid fa-right-from-bracket px-2" onclick="location.href='/logout'"></i>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center p-5">
+        <h1>Productos disponibles</h1>
+    </header>
+    <main>
         <section class="py-5">
             <div class="container px-sm-3 px-md-5 px-lg-5 px-xl-5 px-xxl-5">
                 <div id="productos"

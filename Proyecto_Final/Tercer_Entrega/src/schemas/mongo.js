@@ -35,3 +35,9 @@ export const cartSchema = new mongoose.Schema({
     timestamp: { type: "String", require: true },
     productos: { type: "Object", require: true },
 })
+export const buySchema = new mongoose.Schema({
+    username: {type: "String", require: true},
+    timestamp: { type: "String", require: true },
+    productos: { type: "Object", require: true },
+})
+

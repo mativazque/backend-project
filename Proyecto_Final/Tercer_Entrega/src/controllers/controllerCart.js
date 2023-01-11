@@ -43,12 +43,12 @@ export default class ControllerMongo {
         }
     }
 
-    async deleteById(id) {
+    async deleteByUser(username) {
         try {
-            const itemFound = await this.getById(id)
+            const itemFound = await this.getByUser(username)
             if (itemFound) {
-                await this.collection.deleteOne({ _id: id })
-                return true
+                const deleteItem = await this.collection.deleteOne({ username: username})
+                console.log(deleteItem)
             } else {
                 return false
             }

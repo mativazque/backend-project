@@ -8,11 +8,13 @@ import { initMongoDB } from "./src/utils/initMongoDB.js";
 import routerProductsRandom from "./src/routs/web/productRandom.js"
 import routerSession from "./src/routs/web/auth.js"
 import routerWeb from "./src/routs/web/home.js"
+import routerCart from "./src/routs/web/cart.js"
+import routerInfo from "./src/routs/web/info.js"
 import routerUser from "./src/routs/api/user.js"
 import routerProductos from "./src/routs/api/productos.js"
 import routerCreateProd from "./src/routs/api/createProducts.js"
-import routerCart from "./src/routs/api/cart.js"
-import routerInfo from "./src/routs/web/info.js"
+import routerApiCart from "./src/routs/api/cart.js"
+import routerApiInfo from "./src/routs/api/info.js"
 import routerCounter from "./src/routs/web/count.js"
 import routerUndefined from "./src/routs/web/undefined.js"
 import config from "./src/configs/index.js"
@@ -44,11 +46,13 @@ app.set("view engine", "ejs")
 app.use("/api/productos-test", routerProductsRandom)
 app.use("/", routerSession)
 app.use("/", routerWeb)
+app.use("/", routerCart)
+app.use("/", routerInfo)
 app.use("/", routerUser)
 app.use("/", routerProductos)
 app.use("/", routerCreateProd)
-app.use("/", routerCart)
-app.use("/", routerInfo)
+app.use("/", routerApiCart)
+app.use("/", routerApiInfo)
 app.use("/", routerCounter)
 app.use("/", routerUndefined)
 

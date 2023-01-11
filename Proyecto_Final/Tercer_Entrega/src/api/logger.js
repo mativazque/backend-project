@@ -1,3 +1,3 @@
-import {createLogger} from "./../configs/logger.js"
+import {createLogger} from "../loggers/config.js"
 
 export const logger = createLogger()

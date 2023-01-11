@@ -1,9 +1,9 @@
 const dataCartUser = () => {
-
     fetch("./api/cart")
         .then(response => response.json())
         .then(resp => {
-            document.getElementById("counterCart").innerText = `${resp.totalQuantity}`
+            const quantity = resp.totalQuantity ? resp.totalQuantity : 0
+            document.getElementById("counterCart").innerText = `${quantity}`
             return generatorHtmlTable(resp.cart, resp.totalPrice)
         })
         .then(html => domEditor("cartContainer", html))
@@ -38,12 +38,41 @@ const domEditor = (id, html) => {
 }
 
 const deleteItem = (id) => {
+    setTimeout(() => {
+        dataCartUser()
+    }, 1000)
     axios({
         method: 'put',
         url: '/api/cart',
         data: { idProd: id }
     })
-    dataCartUser()
 }
 
+const confirmBuy = () => {
+    setTimeout(() => {
+        dataCartUser()
+    }, 2000)
 
+    alert("Muchas gracias por su compra")
+
+    axios({
+        method: 'post',
+        url: '/api/cartConfirm',
+        data: {}
+    })
+}
+
+const deleteAll = () => {
+    setTimeout(() => {
+        dataCartUser()
+    }, 2000)
+
+    alert("Los items fueron eliminados")
+
+    axios({
+        method: 'delete',
+        url: '/api/cart',
+        data: {}
+    })
+
+}

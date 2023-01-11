@@ -2,7 +2,7 @@ import passport from "passport"
 import { Strategy as LocalStrategy } from "passport-local"
 import bCrypt from "bcrypt"
 import { users } from "./../api/users.js"
-
+import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
 
 
 function isValidPassword(user, password) {
@@ -54,6 +54,15 @@ const initPassword = () => {
                 avatar: avatar
             })
             const usedCreated = await users.getById(newUser)
+
+            const sendedEmail = sendEmailNewUser({
+                username: username,
+                name: name,
+                address: address,
+                age: age,
+                phone: phone,
+                id: newUser
+            })
 
             return done(null, usedCreated)
         }
