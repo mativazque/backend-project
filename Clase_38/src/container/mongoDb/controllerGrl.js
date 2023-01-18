@@ -8,7 +8,17 @@ export default class ControllerMongo {
         this.logger = logger
     }
 
-    //Yes
+    async save(data) {
+        try {
+            const newItem = new this.collection(data)
+            const result = await newItem.save()
+            const idItem = result._id.toString()
+            return idItem
+        } catch (error) {
+            this.logger.error(`Error: ${error}`)
+        }
+    }
+
     async getAll() {
         try {
             return await this.collection.find({})
@@ -17,7 +27,6 @@ export default class ControllerMongo {
         }
     }
 
-    //Yes
     async getById(id) {
         try {
             return await this.collection.findOne({ _id: id })
@@ -28,21 +37,7 @@ export default class ControllerMongo {
 
     async deleteById(id) {
         try {
-            const itemFound = await this.getById(id)
-            if (itemFound) {
-                await this.collection.deleteOne({ _id: id })
-                return true
-            } else {
-                return false
-            }
-        } catch (error) {
-            this.logger.error(`Error: ${error}`)
-        }
-    }
-
-    async update(element, id) {
-        try {
-            await this.collection.updateOne({ _id: id }, { $set: element })
+            return await this.collection.deleteOne({ _id: id })
         }
         catch (error) {
             this.logger.error(`Error: ${error}`)

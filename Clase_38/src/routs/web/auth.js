@@ -60,7 +60,7 @@ router.post("/login", passport.authenticate('login', {
 router.get("/logout", async (req, res) => {
     let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     logger.info(`Ruth: ${fullUrl} Method: ${req.method}`)
-    const user = await users.getByUsername(req.session.passport.user)
+    const user = await users.getByUser(req.session.passport.user)
     req.session.destroy(err => {
         if (err) {
             return res.json({ status: `Logout error`, body: err })

@@ -8,19 +8,6 @@ class daoMongoCarts extends controllerMongo {
         this.ObjectId = ObjectId
     }
 
-
-    async save(data) {
-        try {
-            const newItem = new this.collection(data)
-            const result = await newItem.save()
-            const idItem = result._id.toString()
-            return idItem
-        } catch (error) {
-            this.logger.error(`Error: ${error}`)
-        }
-    }
-
-
     async getByUser(user) {
         try {
             return await this.collection.findOne({ username: user })
@@ -31,8 +18,7 @@ class daoMongoCarts extends controllerMongo {
 
     async deleteByUser(username) {
         try {
-            const deleteItem = await this.collection.deleteOne({ username: username })
-            return deleteItem
+            return await this.collection.deleteOne({ username: username })
         } catch (error) {
             this.logger.error(`Error: ${error}`)
         }

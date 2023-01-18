@@ -38,6 +38,7 @@ export const cartSchema = new mongoose.Schema({
 export const buySchema = new mongoose.Schema({
     username: {type: "String", require: true},
     timestamp: { type: "String", require: true },
-    productos: { type: "Object", require: true },
+    total: { type: "Number", require: true },
+    productos: { type: "Object", require: true }
 })
 

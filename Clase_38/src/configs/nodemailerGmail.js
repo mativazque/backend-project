@@ -39,15 +39,15 @@ export const sendEmailNewUser = async (data) => {
     }
 }
 
-export const sendEmailtoAdminNewBuy = async (data) => {
+export const sendEmailtoAdminNewBuy = async (buy) => {
 
     const html = `
     <h3>Se ha registrado una nueva compra</h3>
     <h4>Sos datos son:</h4>
     <ul>
-        <li>Id: ${data.id}</li>
-        <li>Total $: ${data.total}</li>
-        <li>fecha: ${data.timestamp}</li>
+        <li>Id: ${buy._id}</li>
+        <li>Total $: ${buy.total}</li>
+        <li>fecha: ${buy.timestamp}</li>
     </ul>
     
     <p>Verificar mediante su ID su estado para cumplir su realización</p>
@@ -56,7 +56,7 @@ export const sendEmailtoAdminNewBuy = async (data) => {
     const mailOptions = {
         from: 'eCommerce Project',
         to: process.env.USER_EMAIL_ADMIN,
-        subject: `Nueva compra ${data.id}`,
+        subject: `Nueva compra ${buy._id}`,
         html: html,
     }
     try {

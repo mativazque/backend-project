@@ -1,5 +1,4 @@
-import { cart } from "../daos/index.js"
-import { productos } from "../daos/index.js"
+import { cart, productos, buys, users } from "../daos/index.js"
 
 export class CartService {
 
@@ -52,5 +51,23 @@ export class CartService {
         const deleteCart = await cart.deleteByUser(username)
         return deleteCart
     }
+
+    static async createBuy(username) {
+        const cartFound = await this.getByUser(username)
+        const totalBuy = cartFound.productos.reduce((acum, buy) => acum + buy.price * buy.quantity, 0)
+        const newBuy = {
+            username: username,
+            productos: [cartFound.productos],
+            total: totalBuy,
+            timestamp: new Date().toLocaleString(),
+        }
+        const saveBuy = await buys.save(newBuy)
+        return saveBuy
+    }
+
+    static async getBuyById(id) {
+       return await buys.getById(id)
+    }
+    
 }
 

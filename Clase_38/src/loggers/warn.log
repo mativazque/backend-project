@@ -11,3 +11,6 @@
 {"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
 {"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
 {"level":"warn","message":"Not found URL: http://localhost:8080/alt=%22img%22/"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
