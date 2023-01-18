@@ -1,12 +1,16 @@
 import passport from "passport"
 import { Strategy as LocalStrategy } from "passport-local"
 import bCrypt from "bcrypt"
-import { users } from "./../api/users.js"
+import {users} from "../daos/index.js"
 import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
 
 
 function isValidPassword(user, password) {
     return bCrypt.compareSync(password, user.password)
+}
+
+function createHash(password) {
+    return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null)
 }
 
 
@@ -44,9 +48,11 @@ const initPassword = () => {
 
             const { name, address, age, phone, avatar } = req.body
 
+            const encryptedPassword = createHash(password)
+
             const newUser = await users.save({
                 username: username,
-                password: password,
+                password: encryptedPassword,
                 name: name,
                 address: address,
                 age: age,

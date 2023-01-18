@@ -1,6 +1,6 @@
 // import { fork } from "child_process";
 import { Router } from "express"
-import { logger } from "../../api/logger.js"
+import { logger } from "../../loggers/config.js"
 
 const router = Router()
 

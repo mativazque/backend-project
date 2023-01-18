@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { logger } from "../../api/logger.js"
-import { users } from "../../api/users.js"
+import { logger } from "../../loggers/config.js"
+import { users } from "../../daos/index.js"
 
 const router = Router()
 
@@ -37,7 +37,7 @@ const captureData = (user) => {
             value: user.avatar
         }]
 
-        return data
+    return data
 }
 
 router.get("/api/info", async (req, res) => {

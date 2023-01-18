@@ -1,6 +1,6 @@
 import {Router} from "express"
-import {users} from "./../../api/users.js"
-import {logger} from "../../api/logger.js"
+import {users} from "../../daos/index.js"
+import {logger} from "../../loggers/config.js"
 
 const router = Router()
 

@@ -1,12 +1,12 @@
 import { Router } from "express"
-import { cart } from "./../../api/cart.js"
-import { productos } from "./../../api/productos.js"
-import { logger } from "../../api/logger.js"
-import { buys } from "../../api/buys.js"
+import { cart } from "./../../daos/index.js"
+import { productos } from "./../../daos/index.js"
+import { buys } from "./../../daos/index.js"
+import { users } from "./../../daos/index.js"
+import { logger } from "../../loggers/config.js"
 import { sendEmailtoAdminNewBuy } from "../../configs/nodemailerGmail.js"
 import {sendWsptoAdminNewBuy} from "../../configs/twilioWsp.js"
 import {sendSmsToClientNewBuy} from "../../configs/twilioSms.js"
-import {users} from "./../../api/users.js"
 
 
 const router = Router()
@@ -66,7 +66,7 @@ router.post("/api/cart", async (req, res) => {
 router.put("/api/cart", async (req, res) => {
     try {
         const cartFound = await cart.getByUser(req.session.passport.user)
-        const newProductsCart = cartFound.productos.filter(item => item._id != req.body.idProd)
+        const newProductsCart = cartFound.productos?.filter(item => item._id != req.body.idProd)
         await cart.updateProductos(req.session.passport.user, newProductsCart)
     } catch (error) {
         console.log(error)

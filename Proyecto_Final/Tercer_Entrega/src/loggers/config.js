@@ -1,6 +1,6 @@
 import winston from "winston"
 
-export const createLogger = () => {
+const createLogger = () => {
     const logger = winston.createLogger({
         transports: [
             new winston.transports.Console({level: "info"}),
@@ -10,3 +10,5 @@ export const createLogger = () => {
     })
     return logger
 }
+
+export const logger = createLogger()

@@ -1,6 +1,6 @@
 import {Router} from "express"
-import {productos} from "./../../api/productos.js"
-import {logger} from "../../api/logger.js"
+import {productos} from "../../daos/index.js"
+import {logger} from "../../loggers/config.js"
 
 const router = Router()
 

@@ -2,10 +2,9 @@ import express from "express";
 import { Server as HttpServer } from "http"
 import { Server as IoServer } from "socket.io"
 import session from "express-session"
-import {initSocket} from "./src/utils/initSocket.io.js"
+import { initSocket } from "./src/utils/initSocket.io.js"
 import mongoose from "mongoose"
 import { initMongoDB } from "./src/utils/initMongoDB.js";
-import routerProductsRandom from "./src/routs/web/productRandom.js"
 import routerSession from "./src/routs/web/auth.js"
 import routerWeb from "./src/routs/web/home.js"
 import routerCart from "./src/routs/web/cart.js"
@@ -19,7 +18,7 @@ import routerCounter from "./src/routs/web/count.js"
 import routerUndefined from "./src/routs/web/undefined.js"
 import config from "./src/configs/index.js"
 import cluster from "cluster"
-import {cpus} from "os" 
+import { cpus } from "os"
 import compression from "compression"
 
 import passport from "passport"
@@ -43,7 +42,6 @@ app.use(passport.session())
 
 
 app.set("view engine", "ejs")
-app.use("/api/productos-test", routerProductsRandom)
 app.use("/", routerSession)
 app.use("/", routerWeb)
 app.use("/", routerCart)
@@ -63,7 +61,7 @@ app.use("/", routerUndefined)
 // const io = new IoServer(httpServer)
 // initSocket(io)
 
-if(config.MODE == "cluster" && cluster.isPrimary) {
+if (config.MODE == "cluster" && cluster.isPrimary) {
     const numCPUs = cpus().length
     console.log(`Número de procesadores: ${numCPUs}`)
     console.log(`PID MASTER: ${process.pid}`)
@@ -83,6 +81,3 @@ if(config.MODE == "cluster" && cluster.isPrimary) {
     }).on('error', (err) => console.log(err))
     console.log(`proceso ${process.pid} escuchando en el puerto ${config.PORT}`)
 }
-
-
-
