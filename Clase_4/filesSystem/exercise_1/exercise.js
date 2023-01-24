@@ -15,7 +15,6 @@ const readFile = (route) => {
     } catch (err) {
         console.log(err)
     }
-
 }
 
 
