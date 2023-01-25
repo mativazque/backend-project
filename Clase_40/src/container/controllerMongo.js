@@ -1,8 +1,5 @@
 import { model } from 'mongoose';
-import { logger } from "../../../loggers/config.js"
-
-let instance = null
-
+import { logger } from "../loggers/config.js"
 
 export default class ControllerMongo {
     constructor(collectionName, mongoSchema) {

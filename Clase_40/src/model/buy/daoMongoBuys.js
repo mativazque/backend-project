@@ -1,20 +1,20 @@
-import { usersSchema } from "../../../schemas/mongo.js"
-import controllerMongo from "../../container/mongoDb/controllerGrl.js"
+import controllerMongo from "../../container/controllerMongo.js"
+import { buySchema } from "../../schemas/mongo.js"
 
 let instance = null
 
-class daoMongoUsers extends controllerMongo {
+class daoMongoBuys extends controllerMongo {
     constructor() {
-        super("users", usersSchema)
+        super("buys", buySchema)
     }
 
     static getInstance() {
         if (!instance) {
-            instance = new daoMongoUsers()
+            instance = new daoMongoBuys()
         }
         return instance
     }
-
+    
     async getByUser(username) {
         try {
             return await this.collection.findOne({ username: username })
@@ -22,6 +22,7 @@ class daoMongoUsers extends controllerMongo {
             this.logger.error(`Error: ${error}`)
         }
     }
+
 }
 
-export default daoMongoUsers
+export default daoMongoBuys

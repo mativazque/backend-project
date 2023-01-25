@@ -1,5 +1,5 @@
-import controllerMongo from "../../container/mongoDb/controllerGrl.js"
-import { cartSchema } from "../../../schemas/mongo.js"
+import controllerMongo from "../../container/controllerMongo.js"
+import { cartSchema } from "../../schemas/mongo.js"
 import { ObjectId } from "mongodb"
 
 let instance = null

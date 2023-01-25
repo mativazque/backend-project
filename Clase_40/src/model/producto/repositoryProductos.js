@@ -1,4 +1,4 @@
-import {productos} from "../daos/factory.js"
+import {productos} from "./factoryProductos.js"
 
 
 export class RepoProductos {

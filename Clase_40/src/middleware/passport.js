@@ -1,7 +1,7 @@
 import passport from "passport"
 import { Strategy as LocalStrategy } from "passport-local"
 import bCrypt from "bcrypt"
-import {users} from "../model/daos/factory.js"
+import {users} from "../model/user/factoryUser.js"
 import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
 
 

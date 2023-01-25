@@ -1,5 +1,5 @@
-import { productosSchema } from "../../../schemas/mongo.js"
-import controllerMongo from "../../container/mongoDb/controllerGrl.js"
+import { productosSchema } from "../../schemas/mongo.js"
+import controllerMongo from "../../container/controllerMongo.js"
 
 let instance = null
 

@@ -1,8 +1,8 @@
 import {model} from 'mongoose';
 import { normalize, denormalize } from "normalizr"
-import { mensajesNormalized } from "../../schemas/normalizer.js"
-import { mensajeSchema } from "../../schemas/mongo.js"
-import {logger} from "../../loggers/config.js"
+import { mensajesNormalized } from "../schemas/normalizer.js"
+import { mensajeSchema } from "../schemas/mongo.js"
+import {logger} from "../loggers/config.js"
 
 
 export default class controllerMsg {

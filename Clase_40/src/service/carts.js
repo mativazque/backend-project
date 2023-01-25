@@ -1,6 +1,8 @@
-import { cart, productos, buys, } from "../model/daos/factory.js"
-import { createNewCart } from "../model/dto/dtoNewCart.js"
-import { createNewBay } from "../model/dto/dtoNewBuy.js"
+import {cart} from "../model/cart/factoryCart.js"
+import {productos} from "../model/producto/factoryProductos.js"
+import {buys} from "../model/buy/factoryBuy.js"
+import { createNewCart } from "../model/cart/dtoCart.js"
+import { createNewBay } from "../model/buy/dtoBuy.js"
 
 export class CartService {
 

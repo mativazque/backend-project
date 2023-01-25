@@ -1,4 +1,4 @@
-import { RepoProductos } from "../model/repository/repositoryProductos.js"
+import { RepoProductos } from "../model/producto/repositoryProductos.js"
 
 const productos = new RepoProductos()
 

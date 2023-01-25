@@ -2,7 +2,7 @@ import express from "express";
 import { Server as HttpServer } from "http"
 import { Server as IoServer } from "socket.io"
 import session from "express-session"
-import { initSocket } from "./src/utils/initSocket.io.js"
+// import { initSocket } from "./src/utils/initSocket.io.js"
 import mongoose from "mongoose"
 import { initMongoDB } from "./src/utils/initMongoDB.js";
 
