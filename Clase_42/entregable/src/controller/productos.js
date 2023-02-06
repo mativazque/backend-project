@@ -1,10 +1,10 @@
 import { ProductosService } from "../service/productos.js"
-import {logger, viewUrl} from "../loggers/config.js"
+import {logger, viewUrl} from "../configs/loggers.js"
 
 async function getAllProductos (req, res) {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     const productos = await ProductosService.readAll()
-    res.json({productos: productos})
+    res.status(200).json({productos: productos})
 }
 
 async function postProducto (req, res) {

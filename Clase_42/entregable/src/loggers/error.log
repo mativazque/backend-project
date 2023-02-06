@@ -15,3 +15,5 @@
 {"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
 {"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
 {"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+2/5/2023, 6:17:22 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2/5/2023, 11:57:46 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms

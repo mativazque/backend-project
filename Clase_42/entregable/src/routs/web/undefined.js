@@ -1,5 +1,6 @@
 import {Router} from "express"
-import {logger} from "../../loggers/config.js"
+import { logger } from "../../configs/loggers.js"
+
 
 const router = Router ()
 
@@ -11,3 +12,4 @@ router.use("/", (req, res) => {
 })
 
 export default router
+

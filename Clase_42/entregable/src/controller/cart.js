@@ -1,9 +1,9 @@
 import { CartService } from "../service/carts.js"
 import { UsersService } from "../service/users.js"
-import { sendEmailtoAdminNewBuy } from "./../configs/nodemailerGmail.js"
-import { sendSmsToClientNewBuy } from "./../configs/twilioSms.js"
+// import { sendEmailtoAdminNewBuy } from "./../configs/nodemailerGmail.js"
+// import { sendSmsToClientNewBuy } from "./../configs/twilioSms.js"
 
-import { logger, viewUrl } from "../loggers/config.js"
+import { logger, viewUrl } from "../configs/loggers.js"
 
 async function getCartByUsername(req, res) {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
@@ -63,13 +63,13 @@ async function confirmCart(req, res) {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     const newBuy = await CartService.createBuy(req.session.passport.user)
     await CartService.deleteCart(req.session.passport.user)
-    await sendEmailtoAdminNewBuy(await CartService.getBuyById(newBuy))
-    const user = await UsersService.getUser(req.session.passport.user)
-    await sendSmsToClientNewBuy({
-        id: newBuy,
-        phone: user.phone
-    }
-    )
+    // await sendEmailtoAdminNewBuy(await CartService.getBuyById(newBuy))
+    // const user = await UsersService.getUser(req.session.passport.user)
+    // await sendSmsToClientNewBuy({
+    //     id: newBuy,
+    //     phone: user.phone
+    // }
+    // )
 }
 
 export {

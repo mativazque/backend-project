@@ -37,8 +37,6 @@ const initPassword = () => {
         { passReqToCallback: true },
         async (req, username, password, done) => {
 
-
-
             const user = await users.getByUser(username)
 
             if (user) {
@@ -73,7 +71,6 @@ const initPassword = () => {
             return done(null, usedCreated)
         }
     ))
-
 
     passport.serializeUser((user, done) => {
         done(null, user.username)

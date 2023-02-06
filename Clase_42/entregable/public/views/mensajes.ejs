@@ -1,0 +1,14 @@
+<% data.mensajes.map(msj=> { %>
+    <div class="d-flex flex-wrap my-1 px-2 align-items-center">
+        <p class="fw-bold text-primary m-0">
+            <%= msj.author.id %>
+        </p>
+        <p class="text-danger m-0">
+            <%= msj.fecha %>:
+        </p>
+        <p class="text-success fst-italic fw-semibold m-0">
+            <%=msj.text%>
+        </p>
+        <img src=<%=msj.author.avatar%> alt="avatar" class="imgAvatar">
+    </div>
+    <% }) %>

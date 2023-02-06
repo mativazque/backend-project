@@ -18,8 +18,6 @@ const io = new IoServer(httpServer)
 
 const mensajes = new controllerMsg()
 
-
-
 io.on("connection", async (socket) => {
     console.log(`User id ${socket.id} connected`)
 
@@ -29,8 +27,6 @@ io.on("connection", async (socket) => {
         await mensajes.save(newMsj)
         io.sockets.emit("mensajes", await mensajes.normalizar())
     })
-
-
 
     socket.on("disconnect", () => {
         console.log(`User id ${socket.id} disconnected`)

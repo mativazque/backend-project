@@ -1,25 +1,24 @@
-// import {mensajes, productos} from "../model/daos/factory.js"
+import { Server as IoServer } from "socket.io"
+import {httpServer} from "../../app.js"
+import {mensajes} from "../model/mensajes/factoryMsj.js"
 
-// export const initSocket = (io) => {
-//     io.on("connection", async (socket) => {
-//         console.log(`User id ${socket.id} connected`)
+const io = new IoServer(httpServer)
 
-//         socket.emit("productos", await productos.getAll())
+const initSocket = () => {
+    io.on("connection", async (socket) => {
+        console.log(`User id ${socket.id} connected`)
 
-//         socket.on("new-product", async (newProduct) => {
-//             await productos.save(newProduct)
-//             io.sockets.emit("productos", await productos.getAll())
-//         })
+        socket.emit("mensajes", await mensajes.normalizar())
 
-//         socket.emit("mensajes", await mensajes.normalizar())
+        socket.on("new-msj", async (newMsj) => {
+            await mensajes.save(newMsj)
+            io.sockets.emit("mensajes", await mensajes.normalizar())
+        })
 
-//         socket.on("new-msj", async (newMsj) => {
-//             await mensajes.save(newMsj)
-//             io.sockets.emit("mensajes", await mensajes.normalizar())
-//         })
+        socket.on("disconnect", () => {
+            console.log(`User id ${socket.id} disconnected`)
+        })
+    })
+}
 
-//         socket.on("disconnect", () => {
-//             console.log(`User id ${socket.id} disconnected`)
-//         })
-//     })
-// }
+export {initSocket}

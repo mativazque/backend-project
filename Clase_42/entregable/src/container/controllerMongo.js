@@ -1,5 +1,5 @@
 import { model } from 'mongoose';
-import { logger } from "../loggers/config.js"
+import { logger } from "../configs/loggers.js"
 import { ObjectId } from "mongodb"
 
 

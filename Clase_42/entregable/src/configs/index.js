@@ -1,5 +1,4 @@
 import "dotenv/config"
-import processArgs from "./parameters.js"
 
 // console.log(processArgs)
 
@@ -9,8 +8,8 @@ const advancedOptionsMongoDB = {
 }
 
 const config = {
-    PORT: parseInt(processArgs.port) || 8080,
-    MODE: processArgs.mode || "fork",
+    PORT: process.env.PORT,
+    MODE: process.env.MODE,
     mongoDB: {
         URL: process.env.urlMongoDB,
         other: advancedOptionsMongoDB

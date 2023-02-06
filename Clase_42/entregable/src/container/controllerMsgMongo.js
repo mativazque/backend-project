@@ -2,8 +2,9 @@ import {model} from 'mongoose';
 import { normalize, denormalize } from "normalizr"
 import { mensajesNormalized } from "../schemas/normalizer.js"
 import { mensajeSchema } from "../schemas/mongo.js"
-import {logger} from "../loggers/config.js"
+import {logger} from "./../configs/loggers.js"
 
+let instance = null
 
 export default class controllerMsg {
     constructor() {
@@ -12,6 +13,13 @@ export default class controllerMsg {
         this.denormalize = denormalize
         this.squemaMsj = mensajesNormalized
         this.logger = logger
+    }
+
+    static getInstance() {
+        if (!instance) {
+            instance = new controllerMsg()
+        }
+        return instance
     }
 
     async getAll() {
@@ -36,7 +44,6 @@ export default class controllerMsg {
         try {
             const newItem = new this.collection(data)
             await newItem.save()
-            console.log("Item guardado exitosamente")
         } catch (error) {
             this.logger.error(`Error: ${error}`)
         }

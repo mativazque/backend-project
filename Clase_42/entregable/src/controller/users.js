@@ -1,5 +1,5 @@
 import { UsersService } from "../service/users.js"
-import {logger, viewUrl} from "../loggers/config.js"
+import {logger, viewUrl} from "../configs/loggers.js"
 
 
 async function getUserByUsername (req, res) {

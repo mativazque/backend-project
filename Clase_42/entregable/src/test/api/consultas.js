@@ -1,4 +1,6 @@
 import axios from "axios";
+import initServer from "../../../server.js"; // To init Server
+
 
 const url = "http://127.0.0.1:8080/api/productos"
 
@@ -54,9 +56,9 @@ async function update(id, newProduct) {
 }
 
 //Considerar el método "getAll" para visualizar id de productos
-//A veces tira errores de conección, intentar nuevamente.
 
-// const testGetAll = console.log(await getAll())
+
+const testGetAll = console.log(await getAll())
 // const testGetById = console.log(await getById("63b495ac4207eabd4a000fcc"))
 // const testPost = console.log(await addProduct(newProduct))
 // const testDelete = console.log(await deleteById("63ddbb391841e806c697ef57"))

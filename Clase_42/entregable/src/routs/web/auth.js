@@ -3,7 +3,7 @@ import path from "path"
 import * as url from "url"
 import passport from "passport"
 import {users} from "../../model/user/factoryUser.js"
-import { logger } from "../../loggers/config.js"
+import { logger } from "../../configs/loggers.js"
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const router = Router()

@@ -1,11 +1,14 @@
 import config from "../configs/index.js"
+import mongoose from "mongoose"
+import {logger} from "../configs/loggers.js"
 
 export const initMongoDB = (conect) => {
     try {
-        conect(config.mongoDB.URL, config.mongoDB.other)
-        console.log("Connected to MongoDB")
+        mongoose.connect(config.mongoDB.URL, config.mongoDB.other)
+        logger.info(`Connected to MongoDB`)
+
     } catch (error) {
-        console.log(error)
+        throw new Error("Couldn't connect to MongoDB'")
     }
 }
 
