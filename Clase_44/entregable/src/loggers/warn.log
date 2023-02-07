@@ -1,0 +1,71 @@
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/cart"}
+{"level":"error","message":"Error: TypeError: Cannot read properties of undefined (reading 'user')"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/favicon.ico"}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 4\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 4\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b49605c8ba8859f4084130',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"error","message":"Error: ValidationError: username: Cast to string failed for value \"{\n  username: 'm@gmail.com',\n  idProduct: '63b495ac4207eabd4a000fcc',\n  quantity: 1\n}\" (type Object) at path \"username\""}
+{"level":"warn","message":"Not found URL: http://localhost:8080/alt=%22img%22/"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/no"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/No"}
+{"level":"warn","message":"Not found URL: http://localhost:8080/api/productos"}
+{"level":"error","message":"Error: MongooseError: Operation `productos.insertOne()` buffering timed out after 10000ms"}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"63b4983cec446b887f56703bs\" (type string) at path \"_id\" for model \"productos\""}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"63b4983cec446b887f56703bs\" (type string) at path \"_id\" for model \"productos\""}
+{"level":"error","message":"Error: CastError: Cast to ObjectId failed for value \"63dd7e4ad3329a7d4fce3f45d\" (type string) at path \"_id\" for model \"productos\""}
+{"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+{"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+{"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
+2/5/2023, 5:28:32 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/5/2023, 5:29:13 PM | [33mwarn[39m: Not found URL: http://localhost:8080/mensajes
+2/5/2023, 5:57:56 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:00:00 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:00:33 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:01:33 PM | [33mwarn[39m: Not found URL: http://localhost:8080/mensjes
+2/5/2023, 6:01:51 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:04:40 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:05:24 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:05:57 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:13:29 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/?EIO=4&transport=polling&t=OOZRKRG
+2/5/2023, 6:13:34 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/?EIO=4&transport=polling&t=OOZRLfx
+2/5/2023, 6:13:39 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/?EIO=4&transport=polling&t=OOZRMuW
+2/5/2023, 6:14:00 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 6:16:15 PM | [33mwarn[39m: Not found URL: http://localhost:8080/mensajes/socket.io/socket.io.js
+2/5/2023, 6:17:22 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2/5/2023, 6:27:24 PM | [33mwarn[39m: Not found URL: http://localhost:8080/socket.io/socket.io.js
+2/5/2023, 11:25:35 PM | [33mwarn[39m: Not found URL: http://localhost:8080/Sin
+2/5/2023, 11:25:48 PM | [33mwarn[39m: Not found URL: http://localhost:8080/Sin
+2/5/2023, 11:29:37 PM | [33mwarn[39m: Not found URL: http://localhost:8080/Sin
+2/5/2023, 11:29:54 PM | [33mwarn[39m: Not found URL: http://localhost:8080/Sin
+2/5/2023, 11:30:05 PM | [33mwarn[39m: Not found URL: http://localhost:8080/Sin
+2/5/2023, 11:39:18 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:50:32 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:52:05 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:53:16 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:53:25 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:53:42 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:53:56 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:54:06 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:55:50 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:56:30 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:57:46 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2/5/2023, 11:57:48 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:59:00 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:59:30 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=%22avatar%22
+2/5/2023, 11:59:52 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/5/2023, 11:59:53 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=%22avatar%22
+2/6/2023, 12:02:37 AM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=%22avatar%22
+2/6/2023, 12:02:37 AM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/6/2023, 2:14:02 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/6/2023, 2:28:37 PM | [33mwarn[39m: Not found URL: http://localhost:8080/undefined
+2/7/2023, 3:23:11 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/7/2023, 4:30:57 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=
+2/7/2023, 4:32:55 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=
+2/7/2023, 5:06:42 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alt=
