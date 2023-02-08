@@ -17,3 +17,16 @@
 {"level":"error","message":"Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer"}
 2/5/2023, 6:17:22 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
 2/5/2023, 11:57:46 PM | [31merror[39m: Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+2/8/2023, 1:52:07 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:52:39 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:52:40 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:52:42 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:52:46 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:53:14 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:54:09 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:54:11 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:54:13 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:54:19 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:57:02 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:57:51 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/8/2023, 1:59:14 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types

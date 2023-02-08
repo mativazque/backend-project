@@ -1,7 +1,7 @@
 import express from "express";
 import { Server as HttpServer } from "http"
 import { graphqlHTTP } from 'express-graphql';
-import { getProductos, createProducto} from "./src/controller/productosGraphQL.js";
+import { getProductos, createProducto, getProducto, updateProducto, deleteProducto} from "./src/controller/productosGraphQL.js";
 import {schema} from "./src/schemas/graphQL.js"
 
 import session from "express-session"
@@ -35,7 +35,10 @@ app.use("/graphql", graphqlHTTP(
         schema: schema,
         rootValue: {
             getProductos,
-            createProducto
+            createProducto,
+            getProducto,
+            updateProducto,
+            deleteProducto
         },
         graphiql: true
     }

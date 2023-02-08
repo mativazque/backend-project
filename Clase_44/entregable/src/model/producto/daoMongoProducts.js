@@ -26,6 +26,17 @@ class daoMongoProducts extends controllerMongo {
             console.log(error)
         }
     }
+
+    async updateProducto(prod) {
+        try {
+            return await this.collection.updateOne(
+                { _id: this.ObjectId(prod._id) },
+                { $set: prod }
+            )
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 export default daoMongoProducts

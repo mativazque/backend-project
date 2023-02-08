@@ -46,5 +46,14 @@ export class ProductosService {
             console.log(error)
         }
     }
+
+    static async updateByID(prod) {
+        try {
+            const newProduct = createNewProduct(prod)
+            return await productos.updateProducto(newProduct)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
