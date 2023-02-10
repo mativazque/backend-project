@@ -1,0 +1,41 @@
+<% if (cart.length > 0) { %>
+    <div>
+        <div class="d-flex flex-column align-items-center">
+            <% cart.map((buy)=> { %>
+                <div class="d-flex w-100 p-2 mb-4 align-items-center containerItemCart bg-white">
+                    <img class="imgCart" src=<%=buy.thumbnail%> alt="img"/>
+                    <div
+                        class="d-flex justify-content-between align-items-center w-100 flex-wrap flex-direction-row align-content-center">
+                        <h6 class="p-2 fw-bolder m-0 rounded-4">
+                            <%=buy.title%>
+                        </h6>
+                        <h6 class="p-2 m-0 text-success fw-bolder">Cantidad: <%=buy.quantity%>
+                        </h6>
+                        <h6 class="fw-bolder p-2 m-0">$
+                            <%= buy.quantity * buy.price %>
+                        </h6>
+                        <i class="fa-solid fa-trash fa-lg" onclick="deleteItem('<%= buy._id %>')"></i>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+        <div>
+            <h3 class="d-flex justify-content-center fw-bolder text-success mt-3">
+               TOTAL $ <%= totalPrice %>
+            </h3>
+            <hr />
+        </div>
+        <div class="d-flex justify-content-around flex-wrap-reverse p-4">
+            <button class="btn btn-danger m-2" onclick="deleteAll()">Borrar todos</button>
+            <button class="btn btn-success m-2" onclick="confirmBuy()">Finalizar compra</button>
+            <button class="btn btn-secondary m-2" onclick="location.href='/home'">Seguir comprando</button>
+        </div>
+    </div>
+    <% } else { %>
+        <div class="d-flex justify-content-center flex-column align-items-center text-success">
+            <h5>No hay items agregados</h5>
+            <a class="text-black m-5" href="./index.html">
+                <button class="btn btn-secondary">Volver al Inicio</button>
+            </a>
+        </div>
+        <% } %>

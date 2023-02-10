@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat support</title>
+
+    <!-- styles css -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- script ejs -->
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.8/ejs.min.js"
+        integrity="sha256-Y2nh8REXJuW3b7k2ytbjm+2IZO0pOsME5Tq+t3HRb8E=" crossorigin="anonymous"></script>
+
+    <!-- script normalizer -->
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+
+    <!-- Awesome Icons -->
+    <script src="https://kit.fontawesome.com/7d0a4d9499.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">eCommerce Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./cart" class="text-decoration-none text-white">
+                            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                            <spam class="spamCart p-1 ps-2 pe-2" id="counterCart">
+
+                            </spam>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex text-white align-items-center">
+                <a class="navbar-brand" href="./info" id="avatar">
+                </a>
+                <a class="navbar-brand" href="./info" id="userName">
+                </a>
+                <i class="fa-solid fa-right-from-bracket px-2" onclick="location.href='/logout'"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="containerMsj">
+            <div class="container my-5 bg-light p-3 rounded border border-5">
+                <h2 class="text-center p-2 m-0">Centro de Mensajes</h2>
+                <h6 class="text-center pb-2 text-primary" id="compresion"></h6>
+                <div class="container">
+                    <form onsubmit="return captureMsj(this)" id="formMsj">
+                        <input type="email" id="mail" class="form-control mb-2" placeholder="e-mail" required>
+                        <input type="text" id="nombre" class="form-control mb-2" placeholder="Nombre" required>
+                        <input type="text" id="apellido" class="form-control mb-2" placeholder="Apellido" required>
+                        <input type="number" id="edad" class="form-control mb-2" placeholder="Edad" required>
+                        <input type="text" id="alias" class="form-control mb-2" placeholder="Alias" required>
+                        <input type="text" id="avatar" class="form-control mb-2" placeholder="Foto" required>
+                        <input type="text" id="texto" class="form-control my-2" placeholder="Escriba aqui su comentario"
+                            required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                    <hr>
+                    <div class="container bg-light">
+                        <div id="mensajes" class="d-flex flex-column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <!-- script Bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- script Socket -->
+    <script src="socket.io/socket.io.js"></script>
+    <!-- script js front -->
+    <script src="./js/mensajes.js"></script>
+
+
+</body>
+
+</html>
