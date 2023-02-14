@@ -29,6 +29,14 @@ export class ProductosService {
         }
     }
 
+    static async getByCat(cat) {
+        try {
+            return await productos.getByCategory(cat)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     static async deleteById(id) {
         try {
             const deleteProduct = await productos.deleteById(id)

@@ -16,6 +16,14 @@ class daoMongoProducts extends controllerMongo {
         return instance
     }
 
+    async getByCategory(cat) {
+        try {
+            return await this.collection.find({category: cat})
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     async updateProduct(id, newProduct) {
         try {
             return await this.collection.updateOne(

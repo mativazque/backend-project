@@ -1,5 +1,6 @@
 import { CartService } from "../service/carts.js"
-
+import { sendEmailtoAdminNewBuy } from "../configs/nodemailerGmail.js"
+import {sendSmsToClientNewBuy} from "../configs/twilioSms.js"
 import { logger, viewUrl } from "../configs/loggers.js"
 
 async function getCartByUsername(req, res) {
@@ -63,6 +64,12 @@ async function confirmCart(req, res) {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     const newBuy = await CartService.createBuy(req.user.username)
     await CartService.deleteCart(req.user.username)
+    await sendEmailtoAdminNewBuy(await CartService.getBuyById(newBuy))
+    await sendSmsToClientNewBuy({
+        id: newBuy,
+        phone: req.user.phone
+    }
+    )
 }
 
 export {

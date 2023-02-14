@@ -4,20 +4,16 @@ import * as url from "url"
 import { authSignUp, authLogin } from "../../middleware/auth.js"
 import {UsersService} from "../../service/users.js"
 import { logger, viewUrl } from "../../configs/loggers.js"
-import {auth} from "../../middleware/checkAuth.js"
+import {checkAuth} from "../../middleware/checkAuth.js"
 import {checkActive} from "../../middleware/checkActive.js"
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const router = Router()
 
-router.get("/", (req, res) => {
-    logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
-    res.redirect("/home")
-})
 
 // Sign up
 
-router.get("/signup", checkActive, (req, res) => {
+router.get("/signup", (req, res) => {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     res.sendFile("signup.html", { root: path.join(__dirname, "./../../../public") })
 })
@@ -46,12 +42,12 @@ router.get("/loginfail", (req, res) => {
 
 router.post("/login", authLogin, (req, res) => {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
-    res.redirect("/home")
+    res.redirect("/")
 })
 
 //Logout
 
-router.get("/logout", auth, async (req, res) => {
+router.get("/logout", checkAuth, async (req, res) => {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     const user = await UsersService.getUser(req.user.username)
     res.clearCookie("jwt")

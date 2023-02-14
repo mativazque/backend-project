@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
 
-function auth(req, res, next) {
+function checkAuth(req, res, next) {
 
     const PRIVATE_KEY = "myprivatekey"
 
@@ -21,4 +21,4 @@ function auth(req, res, next) {
 
 };
 
-export { auth }
+export { checkAuth }

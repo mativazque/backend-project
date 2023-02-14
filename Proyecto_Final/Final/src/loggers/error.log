@@ -30,3 +30,17 @@
 2/8/2023, 1:57:02 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
 2/8/2023, 1:57:51 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
 2/8/2023, 1:59:14 PM | [31merror[39m: Error: BSONTypeError: Argument passed in does not match the accepted types
+2/13/2023, 5:17:28 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:09 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:11 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:33 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:41 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:19:33 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:19:40 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:20:12 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:21:08 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:21:10 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:26:17 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:26:50 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:27:35 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:28:37 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer

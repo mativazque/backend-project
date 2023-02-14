@@ -1,10 +1,11 @@
 import jwt from "jsonwebtoken"
 import {UsersService} from "../service/users.js"
+import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
 
 const PRIVATE_KEY = "myprivatekey"
 
 function generateToken(user) {
-    const token = jwt.sign({ data: user }, PRIVATE_KEY, { expiresIn: "1h" })
+    const token = jwt.sign({ data: user }, PRIVATE_KEY, { expiresIn: "3h" })
     return token
 }
 
@@ -32,6 +33,8 @@ async function authSignUp(req, res, next) {
     const userToken = { _id, username, name, address, age, phone, avatar }
 
     const jwt = generateToken(userToken)
+
+    await sendEmailNewUser({_id, username, name, address, age, phone})
 
     res.cookie("jwt", jwt)
     next()

@@ -29,7 +29,7 @@ fetch("./api/productos")
 const captureProducto = (id) => {
   setTimeout(() => {
     counterCart()
-  }, 1200)
+  }, 1000)
 
   const idCounter = id + "counter"
   const quantity = document.getElementById(idCounter).textContent

@@ -22,7 +22,7 @@ const createLoger = () => {
 }
 
 export const viewUrl = (req) => {
-    const fullUrl = req.protocol + '://' + req.get('host')
+    const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl
     return fullUrl
 }
 

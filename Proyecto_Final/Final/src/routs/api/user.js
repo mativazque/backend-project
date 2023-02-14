@@ -1,11 +1,11 @@
 import { Router } from "express"
 import { getUserByUsername, getInfoByUsername } from "../../controller/users.js"
-import {auth} from "../../middleware/checkAuth.js"
+import {checkAuth} from "../../middleware/checkAuth.js"
 
 const router = Router()
 
-router.get("/api/user", auth, getUserByUsername)
-router.get("/api/user/info", auth, getInfoByUsername)
+router.get("/api/user", checkAuth, getUserByUsername)
+router.get("/api/user/info", checkAuth, getInfoByUsername)
 
 
 export default router

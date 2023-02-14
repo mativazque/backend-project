@@ -8,7 +8,8 @@ const request = supertest("http://127.0.0.1:8080")
 const newProduct = {
     title: "Regla XXX",
     price: 30,
-    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"
+    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    category: "escolares"
 }
 
 describe("test api rest full", () => {

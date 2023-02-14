@@ -14,11 +14,11 @@ export const mensajeSchema = new mongoose.Schema({
 })
 
 export const productosSchema = new mongoose.Schema({
-    id: { type: "String", require: true},
     title: { type: "String", require: true, max: 60 },
     price: { type: "Number", require: true },
     thumbnail: { type: "String", require: true },
-    timestamp: { type: "String", require: true }
+    timestamp: { type: "String", require: true },
+    category: { type: "String", require: true}
 })
 
 export const usersSchema = new mongoose.Schema({

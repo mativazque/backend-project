@@ -28,13 +28,13 @@
         <div class="d-flex justify-content-around flex-wrap-reverse p-4">
             <button class="btn btn-danger m-2" onclick="deleteAll()">Borrar todos</button>
             <button class="btn btn-success m-2" onclick="confirmBuy()">Finalizar compra</button>
-            <button class="btn btn-secondary m-2" onclick="location.href='/home'">Seguir comprando</button>
+            <button class="btn btn-secondary m-2" onclick="location.href='/productos'">Seguir comprando</button>
         </div>
     </div>
     <% } else { %>
         <div class="d-flex justify-content-center flex-column align-items-center text-success">
             <h5>No hay items agregados</h5>
-            <a class="text-black m-5" href="./index.html">
+            <a class="text-black m-5" href="/productos">
                 <button class="btn btn-secondary">Volver al Inicio</button>
             </a>
         </div>

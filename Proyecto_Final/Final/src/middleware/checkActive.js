@@ -9,7 +9,7 @@ function checkActive(req, res, next) {
 
     jwt.verify(token, PRIVATE_KEY, (err, decoded) => {
         if(decoded) {
-            return res.redirect("/home")
+            return res.redirect("/")
         } 
         next()
     });

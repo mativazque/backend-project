@@ -21,6 +21,13 @@ async function getProductById (req, res) {
     res.status(406).json({respuest: `No existe un producto con ID: ${req.params.id}`})
 }
 
+async function getProductsByCat (req, res) {
+    logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
+    const productsFound = await ProductosService.getByCat(req.params.cat)
+    productsFound ? res.status(200).json(productsFound) : 
+    res.status(406).json({respuest: `No existen productos con categoria: ${req.params.cat}`})
+}
+
 async function deleteProduct (req, res) {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
     const productDelete = await ProductosService.deleteById(req.params.id)
@@ -36,7 +43,7 @@ async function updateProduct (req, res) {
 }
 
 
-export {getAllProductos, postProducto, getProductById, deleteProduct, updateProduct}
+export {getAllProductos, postProducto, getProductById, getProductsByCat, deleteProduct, updateProduct}
 
 
 

@@ -95,3 +95,28 @@
 2/9/2023, 10:03:50 PM | [33mwarn[39m: Not found URL: http://localhost:8080/styles/styles.css
 2/9/2023, 10:04:05 PM | [33mwarn[39m: Not found URL: http://localhost:8080/styles/styles.css
 2/9/2023, 10:04:05 PM | [33mwarn[39m: Not found URL: http://localhost:8080/js/main.js
+2/12/2023, 5:37:59 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/13/2023, 4:19:07 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/13/2023, 4:19:13 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/13/2023, 4:21:09 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/13/2023, 4:23:27 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/13/2023, 4:31:39 PM | [33mwarn[39m: Not found URL: http://localhost:8080/index.html
+2/13/2023, 4:31:45 PM | [33mwarn[39m: Not found URL: http://localhost:8080/index.html
+2/13/2023, 4:32:34 PM | [33mwarn[39m: Not found URL: http://localhost:8080/index.html
+2/13/2023, 4:53:34 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/13/2023, 5:16:23 PM | [33mwarn[39m: Not found URL: http://localhost:8080/productos/escolares
+2/13/2023, 5:17:28 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:09 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:11 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:33 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:18:41 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:19:33 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:19:40 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:20:12 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:21:08 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:21:10 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:26:17 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:26:50 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:27:35 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 5:28:37 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/13/2023, 9:38:37 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home

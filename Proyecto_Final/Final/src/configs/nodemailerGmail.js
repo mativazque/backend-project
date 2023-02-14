@@ -14,10 +14,10 @@ const transporter = createTransport({
 export const sendEmailNewUser = async (data) => {
 
     const html = `
-    <h3>Se ha registrado un nuevo exitosamente</h3>
+    <h3>Se ha registrado un nuevo usuario exitosamente</h3>
     <h4>Sos datos son:</h4>
     <ul>
-        <li>Id: ${data.id}</li>
+        <li>Id: ${data._id}</li>
         <li>username: ${data.username}</li>
         <li>name: ${data.name}</li>
         <li>address: ${data.address}</li>
@@ -28,7 +28,7 @@ export const sendEmailNewUser = async (data) => {
     const mailOptions = {
         from: 'eCommerce Project',
         to: process.env.USER_EMAIL_ADMIN,
-        subject: `Nuevo registro ${data.id}`,
+        subject: `Nuevo registro ${data._id}`,
         html: html,
     }
     try {

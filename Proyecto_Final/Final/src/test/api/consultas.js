@@ -7,7 +7,8 @@ const url = "http://127.0.0.1:8080/api/productos"
 const newProduct = {
     title: "Regla Z",
     price: 30,
-    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"
+    thumbnail: "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    category: "escolares"
 }
 
 async function getAll() {
