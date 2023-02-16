@@ -1,5 +1,7 @@
 import { users } from "../model/user/factoryUser.js"
 import bCrypt from "bcrypt"
+import {logger} from "../configs/loggers.js"
+
 
 const captureData = (user) => {
 
@@ -51,7 +53,7 @@ export class UsersService {
         try {
             return await users.getByUser(username)
         } catch (error) {
-            console.log(error)
+            logger.error(error)
         }
     }
 
@@ -60,7 +62,7 @@ export class UsersService {
             const user = await users.getByUser(username)
             return captureData(user)
         } catch (error) {
-            console.log(error)
+            logger.error(error)
         }
     }
 

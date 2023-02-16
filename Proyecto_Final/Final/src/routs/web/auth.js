@@ -25,7 +25,7 @@ router.get("/signupfail", (req, res) => {
 
 router.post("/signup", authSignUp, (req, res) => {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
-    res.redirect("/home")
+    res.redirect("/productos")
 })
 
 //login

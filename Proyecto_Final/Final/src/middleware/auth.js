@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken"
-import {UsersService} from "../service/users.js"
+import { UsersService } from "../service/users.js"
 import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
+import { logger } from "../configs/loggers.js"
 
 const PRIVATE_KEY = "myprivatekey"
 
@@ -15,7 +16,8 @@ async function authSignUp(req, res, next) {
     const user = await UsersService.getUser(username)
 
     if (user) {
-        return res.redirect("./signupfial")
+        logger.warn("User already exists")
+        return res.redirect("/signupfail")
     }
 
     const encryptedPassword = UsersService.createHash(req.body.password)
@@ -34,7 +36,7 @@ async function authSignUp(req, res, next) {
 
     const jwt = generateToken(userToken)
 
-    await sendEmailNewUser({_id, username, name, address, age, phone})
+    await sendEmailNewUser({ _id, username, name, address, age, phone })
 
     res.cookie("jwt", jwt)
     next()
@@ -44,9 +46,11 @@ async function authLogin(req, res, next) {
 
     const user = await UsersService.getUser(req.body.username)
 
-    const validationPass = UsersService.isValidPassword(user, req.body.password)
-
-    if (!user || !validationPass) {
+    if (!user) {
+        logger.warn("Username doesn't exist")
+        return res.redirect("./loginfail")
+    } else if (!(UsersService.isValidPassword(user, req.body.password))) {
+        logger.warn("Password incorrect")
         return res.redirect("./loginfail")
     }
 

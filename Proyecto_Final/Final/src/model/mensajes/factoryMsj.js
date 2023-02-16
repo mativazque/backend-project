@@ -6,8 +6,8 @@ let mensajes
 switch (process.env.PERSISTENCIA_MSJ) {
 
     case 'MONGODB':
-        const { default: controllerMsg } = await import("../../container/controllerMsgMongo.js")
-        mensajes = controllerMsg.getInstance()
+        const { default: daoMongoMensajes } = await import("./../../model/mensajes/daoMongoMsj.js")
+        mensajes = daoMongoMensajes.getInstance()
 
 
     // case 'MYSQL':

@@ -1,5 +1,5 @@
 import { productosSchema } from "../../schemas/mongo.js"
-import controllerMongo from "../../container/controllerMongo.js"
+import controllerMongo from "../../container/mongoDB.js"
 
 let instance = null
 
@@ -18,6 +18,7 @@ class daoMongoProducts extends controllerMongo {
 
     async getByCategory(cat) {
         try {
+            this.logger.info("Method GetByCategory successful - MongoDB")
             return await this.collection.find({category: cat})
         } catch (error) {
             console.log(error)
@@ -26,6 +27,7 @@ class daoMongoProducts extends controllerMongo {
 
     async updateProduct(id, newProduct) {
         try {
+            this.logger.info("Method UpdateProduct successful - MongoDB")
             return await this.collection.updateOne(
                 { _id: this.ObjectId(id) },
                 { $set: newProduct }

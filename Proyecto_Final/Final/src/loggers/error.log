@@ -44,3 +44,11 @@
 2/13/2023, 5:26:50 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
 2/13/2023, 5:27:35 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
 2/13/2023, 5:28:37 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+2/15/2023, 7:28:40 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:28:50 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:29:22 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:30:06 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:30:31 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:31:51 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:34:54 PM | [31merror[39m: getAllAndRewrite is not defined
+2/15/2023, 7:34:56 PM | [31merror[39m: getAllAndRewrite is not defined

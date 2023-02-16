@@ -1,9 +1,8 @@
 import twilio from "twilio"
 import 'dotenv/config'
-
+import { logger } from "../configs/loggers.js"
 
 const client = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN)
-
 
 export const sendWsptoAdminNewBuy = async (data) => {
     
@@ -26,8 +25,8 @@ export const sendWsptoAdminNewBuy = async (data) => {
 
     try {
         const msg = await client.messages.create(options)
-        console.log(msg)
+        logger.ingo(msg)
     } catch (error) {
-        console.log(error)
+        logger.error(error)
     }
 }

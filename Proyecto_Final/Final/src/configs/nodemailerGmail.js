@@ -1,5 +1,6 @@
 import { createTransport } from "nodemailer";
 import "dotenv/config"
+import { logger } from "../configs/loggers.js"
 
 const transporter = createTransport({
     host: 'smtp.gmail.com',
@@ -9,7 +10,6 @@ const transporter = createTransport({
         pass: process.env.PASS_EMAIL_ADMIN
     }
 })
-
 
 export const sendEmailNewUser = async (data) => {
 
@@ -33,9 +33,9 @@ export const sendEmailNewUser = async (data) => {
     }
     try {
         const send = await transporter.sendMail(mailOptions)
-        console.log(send)
+        logger.info(send)
     } catch (error) {
-        console.log(error)
+        logger.error(error)
     }
 }
 
@@ -61,8 +61,9 @@ export const sendEmailtoAdminNewBuy = async (buy) => {
     }
     try {
         const send = await transporter.sendMail(mailOptions)
-        console.log(send)
+        logger.info(send)
+
     } catch (error) {
-        console.log(error)
+        logger.error(error)
     }
 }

@@ -120,3 +120,27 @@
 2/13/2023, 5:27:35 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
 2/13/2023, 5:28:37 PM | [31merror[39m: Error: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
 2/13/2023, 9:38:37 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/15/2023, 7:28:40 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:28:50 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:29:22 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:30:06 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:30:31 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:31:51 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
+2/15/2023, 7:34:54 PM | [31merror[39m: getAllAndRewrite is not defined
+2/15/2023, 7:34:56 PM | [31merror[39m: getAllAndRewrite is not defined
+2/16/2023, 4:11:07 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/16/2023, 4:12:10 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/16/2023, 4:12:46 PM | [33mwarn[39m: Not found URL: http://localhost:8080/favicon.ico
+2/16/2023, 4:14:00 PM | [33mwarn[39m: Credencials incorrects
+2/16/2023, 4:26:10 PM | [33mwarn[39m: Password incorrect
+2/16/2023, 4:26:28 PM | [33mwarn[39m: User not exists
+2/16/2023, 4:28:00 PM | [33mwarn[39m: Username doesn't exist
+2/16/2023, 4:28:12 PM | [33mwarn[39m: Password incorrect
+2/16/2023, 4:28:37 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/16/2023, 4:30:54 PM | [33mwarn[39m: User already exists
+2/16/2023, 4:30:54 PM | [33mwarn[39m: Not found URL: http://localhost:8080/signupfial
+2/16/2023, 4:33:21 PM | [33mwarn[39m: Not found URL: http://localhost:8080/alsdkf
+2/16/2023, 4:34:00 PM | [33mwarn[39m: User already exists
+2/16/2023, 4:34:32 PM | [33mwarn[39m: Not found URL: http://localhost:8080/home
+2/16/2023, 4:36:57 PM | [33mwarn[39m: Not found URL: http://localhost:8080/no
+2/16/2023, 4:38:16 PM | [33mwarn[39m: Not found URL: http://localhost:8080/slkfj

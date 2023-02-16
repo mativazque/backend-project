@@ -1,22 +1,24 @@
 import { Server as IoServer } from "socket.io"
 import {httpServer} from "../../app.js"
-import {mensajes} from "../model/mensajes/factoryMsj.js"
+import {MensajesService} from "../service/mensajes.js"
+import { logger } from "../configs/loggers.js"
+
 
 const io = new IoServer(httpServer)
 
 const initSocket = () => {
     io.on("connection", async (socket) => {
-        console.log(`User id ${socket.id} connected`)
+        logger.info(`User id ${socket.id} connected`)
 
-        socket.emit("mensajes", await mensajes.normalizar())
+        socket.emit("mensajes", await MensajesService.normalizar())
 
         socket.on("new-msj", async (newMsj) => {
-            await mensajes.save(newMsj)
-            io.sockets.emit("mensajes", await mensajes.normalizar())
+            await MensajesService.save(newMsj)
+            io.sockets.emit("mensajes", await MensajesService.normalizar())
         })
 
         socket.on("disconnect", () => {
-            console.log(`User id ${socket.id} disconnected`)
+            logger.info(`User id ${socket.id} disconnected`)
         })
     })
 }

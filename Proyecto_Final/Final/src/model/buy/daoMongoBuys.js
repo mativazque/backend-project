@@ -1,4 +1,4 @@
-import controllerMongo from "../../container/controllerMongo.js"
+import controllerMongo from "../../container/mongoDB.js"
 import { buySchema } from "../../schemas/mongo.js"
 
 let instance = null
@@ -17,9 +17,10 @@ class daoMongoBuys extends controllerMongo {
     
     async getByUser(username) {
         try {
+            this.logger.info("Method GetByUser successful - MongoDB")
             return await this.collection.findOne({ username: username })
         } catch (error) {
-            this.logger.error(`Error: ${error}`)
+            this.logger.error(error)
         }
     }
 

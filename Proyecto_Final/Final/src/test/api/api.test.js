@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import { expect } from "chai"
-import initServer from "../../../server.js" // To init Server
+import initServer from "../../../server.js" // To init Server automatic
 
 
 const request = supertest("http://127.0.0.1:8080")
