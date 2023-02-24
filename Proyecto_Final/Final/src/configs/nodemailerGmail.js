@@ -2,6 +2,7 @@ import { createTransport } from "nodemailer";
 import "dotenv/config"
 import { logger } from "../configs/loggers.js"
 
+
 const transporter = createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -12,6 +13,8 @@ const transporter = createTransport({
 })
 
 export const sendEmailNewUser = async (data) => {
+
+    console.log(data)
 
     const html = `
     <h3>Se ha registrado un nuevo usuario exitosamente</h3>
@@ -33,7 +36,7 @@ export const sendEmailNewUser = async (data) => {
     }
     try {
         const send = await transporter.sendMail(mailOptions)
-        logger.info(send)
+        logger.info("E-mail enviado exitosamente por nuevo usuario")
     } catch (error) {
         logger.error(error)
     }
@@ -61,8 +64,7 @@ export const sendEmailtoAdminNewBuy = async (buy) => {
     }
     try {
         const send = await transporter.sendMail(mailOptions)
-        logger.info(send)
-
+        logger.info("E-mail enviado exitosamente por nueva compra")
     } catch (error) {
         logger.error(error)
     }

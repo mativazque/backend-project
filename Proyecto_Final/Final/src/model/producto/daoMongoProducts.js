@@ -18,22 +18,20 @@ class daoMongoProducts extends controllerMongo {
 
     async getByCategory(cat) {
         try {
-            this.logger.info("Method GetByCategory successful - MongoDB")
             return await this.collection.find({category: cat})
         } catch (error) {
-            console.log(error)
+            this.logger.error(error)
         }
     }
 
     async updateProduct(id, newProduct) {
         try {
-            this.logger.info("Method UpdateProduct successful - MongoDB")
             return await this.collection.updateOne(
                 { _id: this.ObjectId(id) },
                 { $set: newProduct }
             )
         } catch (error) {
-            console.log(error)
+            this.logger.error(error)
         }
     }
 }

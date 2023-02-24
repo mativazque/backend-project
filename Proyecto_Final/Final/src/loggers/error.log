@@ -52,3 +52,16 @@
 2/15/2023, 7:31:51 PM | [31merror[39m: Cannot read properties of undefined (reading 'normalize')
 2/15/2023, 7:34:54 PM | [31merror[39m: getAllAndRewrite is not defined
 2/15/2023, 7:34:56 PM | [31merror[39m: getAllAndRewrite is not defined
+2/17/2023, 1:34:48 PM | [31merror[39m: mensajes validation failed: author.id: Path `author.id` is required.
+2/17/2023, 5:33:51 PM | [31merror[39m: Authenticate
+2/17/2023, 5:34:38 PM | [31merror[39m: Authenticate
+2/17/2023, 5:37:35 PM | [31merror[39m: Authenticate
+2/17/2023, 5:44:46 PM | [31merror[39m: Authenticate
+2/17/2023, 6:28:48 PM | [31merror[39m: Authenticate
+2/23/2023, 6:52:17 PM | [31merror[39m: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials be41-20020a05680821a900b0037d74967ef6sm2893818oib.44 - gsmtp
+2/23/2023, 6:52:18 PM | [31merror[39m: Authenticate
+2/23/2023, 6:58:35 PM | [31merror[39m: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials k7-20020a056870d38700b00172899830dasm705427oag.4 - gsmtp
+2/23/2023, 6:58:36 PM | [31merror[39m: Error: Authenticate: error al enviar Whatsapp por nueva compra, corrobore la configuración del servicio
+2/23/2023, 7:12:25 PM | [31merror[39m: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer

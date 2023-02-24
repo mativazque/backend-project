@@ -8,13 +8,15 @@ const io = new IoServer(httpServer)
 
 const initSocket = () => {
     io.on("connection", async (socket) => {
+
         logger.info(`User id ${socket.id} connected`)
 
-        socket.emit("mensajes", await MensajesService.normalizar())
+        socket.emit("mensajes", await MensajesService.getAll())
 
         socket.on("new-msj", async (newMsj) => {
             await MensajesService.save(newMsj)
-            io.sockets.emit("mensajes", await MensajesService.normalizar())
+            io.sockets.emit("mensajes", await MensajesService.getAll())
+            logger.info(`New menssage in Chat Support`)
         })
 
         socket.on("disconnect", () => {

@@ -2,9 +2,7 @@ import twilio from "twilio"
 import 'dotenv/config'
 import { logger } from "../configs/loggers.js"
 
-
 const client = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN)
-
 
 export const sendSmsToClientNewBuy = async (data) => {
 
@@ -16,8 +14,9 @@ export const sendSmsToClientNewBuy = async (data) => {
     }
     try {
         const msg = await client.messages.create(options)
-        logger.info(msg)
+        logger.info("SMS enviado exitosamente por nueva compra")
+
     } catch (error) {
-        logger.error(error)
+        logger.error(`${error}: error al enviar Whatsapp por nueva compra, corrobore la configuración del servicio`)
     }
 }

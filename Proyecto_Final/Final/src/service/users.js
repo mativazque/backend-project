@@ -42,7 +42,8 @@ export class UsersService {
 
     static async save(user) {
         try {
-            const create = users.save(user)
+            const newData = {...user, tipo: "user"}
+            const create = users.save(newData)
             return create
         } catch (error) {
             console.log(error)

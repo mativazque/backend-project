@@ -1,14 +1,12 @@
+let counter;
 
-const counterCart = () => {
-  fetch("./api/cart")
-    .then(response => response.json())
-    .then(resp => {
-      document.getElementById("counterCart").innerText = `${resp.totalQuantity}`
-    })
-    .catch(err => console.log(err))
-}
-
-counterCart()
+fetch("./api/cart")
+  .then(response => response.json())
+  .then(resp => {
+    document.getElementById("counterCart").innerText = `${resp.totalQuantity}`
+    counter = resp.totalQuantity
+  })
+  .catch(err => console.log(err))
 
 fetch("./api/user")
   .then(respuesta => respuesta.json())
@@ -21,18 +19,13 @@ fetch("./api/user")
 fetch("./api/productos")
   .then(response => response.json())
   .then(resp => generatorHtmlTable(resp.productos))
-  .then(html => domEditor("productos", html))
   .catch(err => console.log(err))
 
 
-
 const captureProducto = (id) => {
-  setTimeout(() => {
-    counterCart()
-  }, 1000)
-
   const idCounter = id + "counter"
   const quantity = document.getElementById(idCounter).textContent
+  counter += Number(quantity)
   const newItem = {
     IdProduct: id,
     quantity: Number(quantity)
@@ -42,6 +35,7 @@ const captureProducto = (id) => {
     url: '/api/cart',
     data: newItem
   })
+  document.getElementById("counterCart").innerText = counter
 }
 
 const onAdd = (id) => {
@@ -60,20 +54,13 @@ const onRest = (id) => {
   console.log(quantity)
 }
 
-
-
 const generatorHtmlTable = async (productos) => {
   const render = productos.length > 0 ? true : false;
   const res = await fetch("./../views/productos.ejs")
   const view = await res.text()
   const template = ejs.compile(view)
   const html = template({ productos: productos, render: render })
-  return html
-}
-
-
-const domEditor = (id, html) => {
-  document.getElementById(id).innerHTML = html
+  document.getElementById("productos").innerHTML = html
 }
 
 

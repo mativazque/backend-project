@@ -6,6 +6,8 @@ import {UsersService} from "../../service/users.js"
 import { logger, viewUrl } from "../../configs/loggers.js"
 import {checkAuth} from "../../middleware/checkAuth.js"
 import {checkActive} from "../../middleware/checkActive.js"
+import {logout} from "../../middleware/logout.js"
+
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const router = Router()
@@ -47,11 +49,9 @@ router.post("/login", authLogin, (req, res) => {
 
 //Logout
 
-router.get("/logout", checkAuth, async (req, res) => {
+router.get("/logout", logout, async (req, res) => {
     logger.info(`Ruth: ${viewUrl(req)} Method: ${req.method}`)
-    const user = await UsersService.getUser(req.user.username)
-    res.clearCookie("jwt")
-    res.render("logout", { nombre: user.name })
+    res.redirect("/login")
 })
 
 export default router

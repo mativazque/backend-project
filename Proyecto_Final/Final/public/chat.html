@@ -18,9 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.8/ejs.min.js"
         integrity="sha256-Y2nh8REXJuW3b7k2ytbjm+2IZO0pOsME5Tq+t3HRb8E=" crossorigin="anonymous"></script>
 
-    <!-- script normalizer -->
-    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
-
     <!-- Awesome Icons -->
     <script src="https://kit.fontawesome.com/7d0a4d9499.js" crossorigin="anonymous"></script>
 </head>
@@ -39,6 +36,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/productos">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/chat">Chat Support</a>
                     </li>
 
                     <li class="nav-item">
@@ -65,25 +65,17 @@
     <main>
         <div id="containerMsj">
             <div class="container my-5 bg-light p-3 rounded border border-5">
-                <h2 class="text-center p-2 m-0">Centro de Mensajes</h2>
-                <h6 class="text-center pb-2 text-primary" id="compresion"></h6>
+                <h2 class="text-center p-3 m-0">Centro de Mensajes</h2>
                 <div class="container">
                     <form onsubmit="return captureMsj(this)" id="formMsj">
-                        <input type="email" id="mail" class="form-control mb-2" placeholder="e-mail" required>
-                        <input type="text" id="nombre" class="form-control mb-2" placeholder="Nombre" required>
-                        <input type="text" id="apellido" class="form-control mb-2" placeholder="Apellido" required>
-                        <input type="number" id="edad" class="form-control mb-2" placeholder="Edad" required>
-                        <input type="text" id="alias" class="form-control mb-2" placeholder="Alias" required>
-                        <input type="text" id="avatar" class="form-control mb-2" placeholder="Foto" required>
+                        <div class="container bg-light">
+                            <div id="mensajes" class="d-flex flex-column">
+                            </div>
+                        </div>
                         <input type="text" id="texto" class="form-control my-2" placeholder="Escriba aqui su comentario"
                             required>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
-                    <hr>
-                    <div class="container bg-light">
-                        <div id="mensajes" class="d-flex flex-column">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -97,7 +89,7 @@
     <!-- script Socket -->
     <script src="socket.io/socket.io.js"></script>
     <!-- script js front -->
-    <script src="./js/mensajes.js"></script>
+    <script src="./js/chat.js"></script>
 
 
 </body>

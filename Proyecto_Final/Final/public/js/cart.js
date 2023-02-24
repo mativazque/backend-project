@@ -1,16 +1,13 @@
-const dataCartUser = () => {
-    fetch("./api/cart")
-        .then(response => response.json())
-        .then(resp => {
-            document.getElementById("counterCart").innerText = `${resp.totalQuantity}`
-            return generatorHtmlTable(resp.productos, resp.totalValue)
-        })
-        .then(html => domEditor("cartContainer", html))
-        .catch(err => console.log(err))
-}
+let cart;
 
-
-dataCartUser()
+fetch("./api/cart")
+    .then(response => response.json())
+    .then(resp => {
+        cart = resp
+        document.getElementById("counterCart").innerText = `${resp.totalQuantity}`
+        generatorHtmlTable(resp.productos, resp.totalValue)
+    })
+    .catch(err => console.log(err))
 
 
 fetch("./api/user")
@@ -22,56 +19,58 @@ fetch("./api/user")
     .catch(err => console.log(err))
 
 
-
-
 const generatorHtmlTable = async (cart, total) => {
     const res = await fetch("./../views/cart.ejs")
     const view = await res.text()
     const template = ejs.compile(view)
     const html = template({ cart: cart, totalPrice: total })
-    return html
-}
-
-const domEditor = (id, html) => {
-    document.getElementById(id).innerHTML = html
+    document.getElementById("cartContainer").innerHTML = html
 }
 
 const deleteItem = (id) => {
-    setTimeout(() => {
-        dataCartUser()
-    }, 1000)
-    axios({
-        method: 'put',
-        url: '/api/cart',
-        data: { IdProduct: id }
-    })
+    if (cart.productos.length > 1) {
+        axios({
+            method: 'put',
+            url: '/api/cart',
+            data: { IdProduct: id }
+        })
+        const productos = cart.productos.filter(item => item._id != id)
+        const totalQuantity = productos.reduce((acum, item) => acum + item.quantity, 0)
+        const totalValue = productos.reduce((acum, item) => acum + item.price * item.quantity, 0)
+        cart = { productos, totalQuantity, totalValue }
+        document.getElementById("counterCart").innerText = cart.totalQuantity
+        generatorHtmlTable(cart.productos, cart.totalValue)
+    } else {
+        axios({
+            method: 'put',
+            url: '/api/cart',
+            data: { IdProduct: id }
+        })
+        cart = { productos: [], totalQuantity: 0, totalValue: 0 }
+        document.getElementById("counterCart").innerText = cart.totalQuantity
+        generatorHtmlTable(cart.productos, cart.totalValue)
+    }
 }
 
 const confirmBuy = () => {
-    setTimeout(() => {
-        dataCartUser()
-    }, 2000)
-
     alert("Muchas gracias por su compra")
-
+    generatorHtmlTable([], 0)
     axios({
         method: 'post',
         url: '/api/cartConfirm',
         data: {}
     })
+    document.getElementById("counterCart").innerText = 0
+
 }
 
 const deleteAll = () => {
-    setTimeout(() => {
-        dataCartUser()
-    }, 2000)
-
     alert("Los items fueron eliminados")
-
+    generatorHtmlTable([], 0)
     axios({
         method: 'delete',
         url: '/api/cart',
         data: {}
     })
-
+    document.getElementById("counterCart").innerText = 0
 }

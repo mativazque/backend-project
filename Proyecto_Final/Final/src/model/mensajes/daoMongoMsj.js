@@ -14,6 +14,14 @@ class daoMongoMensajes extends controllerMongo {
         }
         return instance
     }
+
+    async getByUser(user) {
+        try {
+            return await this.collection.find({ username: user })
+        } catch (error) {
+            this.logger.error(error)
+        }
+    }
 }
 
 export default daoMongoMensajes

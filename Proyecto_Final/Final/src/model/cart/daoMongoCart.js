@@ -18,29 +18,26 @@ class daoMongoCarts extends controllerMongo {
 
     async getByUser(user) {
         try {
-            this.logger.info("Method GetByUser successful - MongoDB")
             return await this.collection.findOne({ username: user })
         } catch (error) {
-            this.logger.error(`Error: ${error}`)
+            this.logger.error(error)
         }
     }
 
     async deleteByUser(username) {
         try {
-            this.logger.info("Method DeleteByUser successful - MongoDB")
             return await this.collection.deleteOne({ username: username })
         } catch (error) {
-            this.logger.error(`Error: ${error}`)
+            this.logger.error(error)
         }
     }
 
     async deleteProductCart(username, newProducts) {
         try {
-            this.logger.info("Method DeleteProductCart successful - MongoDB")
             await this.collection.updateOne({ username: username }, { $set: { "productos": newProducts } })
         }
         catch (error) {
-            this.logger.error(`Error: ${error}`)
+            this.logger.error(error)
         }
     }
 
@@ -54,9 +51,8 @@ class daoMongoCarts extends controllerMongo {
                     }
                 }
             )
-            this.logger.info("Method UpdateProductCart successful - MongoDB")
         } catch (error) {
-            console.log(error)
+            this.logger.error(error)
         }
     }
 
@@ -66,9 +62,8 @@ class daoMongoCarts extends controllerMongo {
                 { username: username },
                 { $push: { productos: producto } }
             )
-            this.logger.info("Method PushProduct successful - MongoDB")
         } catch (error) {
-            console.log(error)
+            this.logger.error(error)
         }
     }
 }

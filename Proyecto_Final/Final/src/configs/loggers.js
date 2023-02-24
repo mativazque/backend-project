@@ -1,5 +1,6 @@
 import { createLogger, format, transports } from "winston"
 
+
 const myFormat = format.printf(({ level, message }) => {
     return `${new Date().toLocaleString()} | ${level}: ${message}`;
 })
@@ -20,10 +21,10 @@ const createLoger = () => {
     })
     return logger
 }
+export const logger = createLoger()
+
 
 export const viewUrl = (req) => {
     const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl
     return fullUrl
 }
-
-export const logger = createLoger()

@@ -16,7 +16,7 @@ export default (async () => {
             logger.info(`Server Error: ${err}`)
         })
     } catch (error) {
-        console.log(error)
+        logger.error(error)
     }
 })()
 

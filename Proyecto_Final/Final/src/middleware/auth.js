@@ -2,11 +2,12 @@ import jwt from "jsonwebtoken"
 import { UsersService } from "../service/users.js"
 import { sendEmailNewUser } from "../configs/nodemailerGmail.js"
 import { logger } from "../configs/loggers.js"
+import "dotenv/config"
 
 const PRIVATE_KEY = "myprivatekey"
 
 function generateToken(user) {
-    const token = jwt.sign({ data: user }, PRIVATE_KEY, { expiresIn: "3h" })
+    const token = jwt.sign({ data: user }, PRIVATE_KEY, { expiresIn: process.env.SESSION_EXPIRATION })
     return token
 }
 

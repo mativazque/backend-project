@@ -1,14 +1,19 @@
-<% data.mensajes.map(msj=> { %>
-    <div class="d-flex flex-wrap my-1 px-2 align-items-center">
-        <p class="fw-bold text-primary m-0">
-            <%= msj.author.id %>
-        </p>
-        <p class="text-danger m-0">
-            <%= msj.fecha %>:
-        </p>
-        <p class="text-success fst-italic fw-semibold m-0">
-            <%=msj.text%>
-        </p>
-        <img src=<%=msj.author.avatar%> alt="avatar" class="imgAvatar">
+<% mensajes.map(msj=> { %>
+    <div class="d-flex flex-wrap my-1 align-items-center border border-3 rounded p-1">
+        <img src=<%=msj.avatar%> alt="avatar" class="imgAvatar">
+        <spam class="fw-bold text-primary m-0 pe-1">
+            <%= msj.username %>
+        </spam>
+        <% if(msj.tipo == "admin") { %> 
+            <spam class="fw-bold text-warning m-0 pe-1">
+            (<%= msj.tipo %>)
+            </spam>
+        <% } %>
+            <spam class="text-danger m-0 pe-1">
+                <%= msj.fecha %>:
+            </spam>
+            <spam class="text-success fst-italic fw-semibold m-0">
+                <%=msj.text%>
+            </spam>
     </div>
     <% }) %>
